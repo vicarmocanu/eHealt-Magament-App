@@ -43,6 +43,7 @@
     <Compile Include="Controller\ISubtaskControl.cs" />
     <Compile Include="Controller\ITaskControl.cs" />
     <Compile Include="Controller\IUserControl.cs" />
+    <Compile Include="Controller\UserControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
