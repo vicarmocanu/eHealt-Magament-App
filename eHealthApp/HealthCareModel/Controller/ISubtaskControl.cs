@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eHealthApp
+namespace HealthCareModel.Controller
 {
-    public class Class1
+    interface ISubtaskControl
     {
     }
 }
