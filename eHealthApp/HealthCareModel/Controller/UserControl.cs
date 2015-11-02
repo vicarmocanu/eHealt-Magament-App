@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace HealthCareModel.Controller
 {
-    class UserControl:IUserControl
+    class UserControl : IUserControl
     {
+        public void createUser(string firstName, string lastName, string username, string password, string role)
+        {
+           
+        }
     }
 }
