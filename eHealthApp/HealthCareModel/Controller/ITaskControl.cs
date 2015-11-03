@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HealthCareModel.Controller
 {
-    interface ITaskControl
+    public interface ITaskControl
     {
+        void createTask(string taskName, bool status, string description);
     }
 }
