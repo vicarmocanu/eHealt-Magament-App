@@ -49,6 +49,7 @@
     <Compile Include="DBHandler\ISubtaskHandler.cs" />
     <Compile Include="DBHandler\ITaskHandler.cs" />
     <Compile Include="DBHandler\IUserHandler.cs" />
+    <Compile Include="DBHandler\TaskHandler.cs" />
     <Compile Include="DBHandler\UserHandler.cs" />
     <Compile Include="Object Models\HealthModels.designer.cs">
       <AutoGen>True</AutoGen>
