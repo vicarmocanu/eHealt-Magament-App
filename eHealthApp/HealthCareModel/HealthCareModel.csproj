@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\ISubtaskControl.cs" />
-    <Compile Include="Controller\ITaskControl.cs" />
-    <Compile Include="Controller\IUserControl.cs" />
-    <Compile Include="Controller\UserControl.cs" />
+    <Compile Include="ControlHandler\AlarmControl.cs" />
+    <Compile Include="ControlHandler\SubTaskControl.cs" />
+    <Compile Include="ControlHandler\TaskControl.cs" />
+    <Compile Include="ControlHandler\UserControl.cs" />
+    <Compile Include="DBHandler\IAlarmHandler.cs" />
+    <Compile Include="DBHandler\ISubtaskHandler.cs" />
+    <Compile Include="DBHandler\ITaskHandler.cs" />
+    <Compile Include="DBHandler\IUserHandler.cs" />
+    <Compile Include="DBHandler\UserHandler.cs" />
     <Compile Include="Object Models\HealthModels.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,7 +83,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Controller\Citeste.txt" />
+    <Content Include="DBHandler\Citeste.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

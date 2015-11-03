@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HealthCareModel.Controller
 {
-    interface ISubtaskControl
+    class AlarmControl
     {
     }
 }
