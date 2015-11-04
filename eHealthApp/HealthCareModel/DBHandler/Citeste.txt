@@ -1,8 +1,0 @@
-﻿ai 3 interfete
-trebuie specificat CRUD in ele
-apoi trebuiesc facute clase pe baza astor trei interfete
-deci specifici functiile in interfete
-si le descrii in clase
-abstractizare
-hai ca si asa ai vrut sa inveti
-cand le faci poti sa stergi txt asta
