@@ -12,7 +12,7 @@ namespace HealthCareModel.Controller
     {
         private static ITaskHandler taskHandler = new TaskHandler();
 
-        public static void createTask(string taskName, bool status, string description)
+        public static void createTask(string taskName, string status, string description)
         {
             taskHandler.createTask(taskName, status, description);
         }
