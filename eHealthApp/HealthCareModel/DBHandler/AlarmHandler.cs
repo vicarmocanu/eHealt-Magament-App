@@ -9,6 +9,7 @@ namespace HealthCareModel.DBHandler
 {
     class AlarmHandler : IAlarmHandler
     {
+        //create Alarm
         public void createAlarm(string name, string type, string time, string location, string status)
         {
             using (var db = new HealthModelsDataContext())
@@ -22,7 +23,7 @@ namespace HealthCareModel.DBHandler
                 alarm.status = status;
             }
         }
-
+        //get Alarm
         public Alarm getAlarm(string name)
         {
             var alarm = new Alarm();
@@ -35,7 +36,7 @@ namespace HealthCareModel.DBHandler
 
             return alarm;
         }
-
+        //get Alarms?????
         public List<Alarm> getAlarms()
         {
             List<Alarm> alarms = new List<Alarm>();
@@ -48,7 +49,7 @@ namespace HealthCareModel.DBHandler
 
             return alarms;
         }
-
+        //update Alarm
         public void updateAlarm(string name, string type, string time, string location, string status)
         {
             var alarm = new Alarm();

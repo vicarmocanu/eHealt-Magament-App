@@ -9,6 +9,7 @@ namespace HealthCareModel.DBHandler
 {
     class SubTaskHandler : ISubTaskHandler
     {
+        //create Task
         public void createSubtask(int taskId, string description, string status)
         {
             using (var db = new HealthModelsDataContext())
@@ -23,7 +24,7 @@ namespace HealthCareModel.DBHandler
                 db.SubmitChanges();
             }
         }
-
+        //get SubTask
         public SubTask getSubtask(int taskId)
         {
             var subtask = new SubTask();
@@ -36,7 +37,7 @@ namespace HealthCareModel.DBHandler
 
             return subtask;
         }
-
+        //get SubTasks
         public List<SubTask> getSubtasks()
         {
             List<SubTask> subtask = new List<SubTask>();
@@ -49,7 +50,7 @@ namespace HealthCareModel.DBHandler
 
             return subtask;
         }
-
+        //update SubTask
         public void updateSubtask(int taskId, string description, string status)
         {
             var subtask = new SubTask();
@@ -68,6 +69,8 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
+
+        //delete SubTask
     }
 
 }

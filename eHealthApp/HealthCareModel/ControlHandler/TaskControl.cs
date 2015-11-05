@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using HealthCareModel.DBHandler;
 using HealthCareModel.Object_Models;
 
-namespace HealthCareModel.Controller
+namespace HealthCareModel.ControlHandler
 {
     public static class TaskControl
     {
@@ -15,6 +14,21 @@ namespace HealthCareModel.Controller
         public static void createTask(string taskName, string status, string description)
         {
             taskHandler.createTask(taskName, status, description);
+        }
+
+        public static Task getTask(string taskName)
+        {
+            return taskHandler.getTask(taskName);
+        }
+
+        public static List<Task> getTasks()
+        {
+            return taskHandler.getTasks();
+        }
+
+        public static void updateTask(string taskName, string status, string description)
+        {
+            taskHandler.updateTask(taskName, status, description);
         }
     }
 }
