@@ -8,9 +8,9 @@ namespace HealthCareModel.DBHandler
 {
     interface ITaskHandler
     {
-        void createTask(string taskName, bool status, string description);
+        void createTask(string taskName, string status, string description);
 
-        void updateTask(string taskName, bool status, string description);
+        void updateTask(string taskName, string status, string description);
 
         Task getTask(string taskName);
 
