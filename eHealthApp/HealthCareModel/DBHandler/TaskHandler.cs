@@ -9,7 +9,7 @@ namespace HealthCareModel.DBHandler
 {
     class TaskHandler : ITaskHandler
     {
-        public void createTask(string taskName, bool status, string description)
+        public void createTask(string taskName, string status, string description)
         {
             using (var db = new HealthModelsDataContext())
             {
@@ -35,7 +35,7 @@ namespace HealthCareModel.DBHandler
             throw new NotImplementedException();
         }
 
-        public void updateTask(string taskName, bool status, string description)
+        public void updateTask(string taskName, string status, string description)
         {
             throw new NotImplementedException();
         }
