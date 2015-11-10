@@ -7,8 +7,6 @@ using HealthCareModel.Object_Models;
 
 namespace HealthCareModel.ControlHandler
 {
-    //static - no need to create objects from this class
-    //methods will have to be static as well
     public static class UserControl
     {
         private static IUserHandler userHandler = new UserHandler();
