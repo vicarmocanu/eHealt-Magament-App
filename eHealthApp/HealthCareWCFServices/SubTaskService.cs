@@ -12,7 +12,7 @@ namespace HealthCareWCFServices
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SubTaskService" in both code and config file together.
     public class SubTaskService : ISubTaskService
     {
-
+        //chk
         private static readonly System.Object obj1 = new System.Object();
         private static readonly System.Object obj2 = new System.Object();
         private static readonly System.Object obj3 = new System.Object();
