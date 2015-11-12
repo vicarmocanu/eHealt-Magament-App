@@ -5,7 +5,6 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using HealthCareModel.ControlHandler;
-using HealthCareModel.Object_Models;
 
 namespace HealthCareWCFServices
 {
