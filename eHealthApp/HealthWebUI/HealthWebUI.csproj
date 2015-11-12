@@ -66,6 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Management\HomeManagement.aspx" />
+    <Content Include="Management\Tasks\AddTask.aspx" />
+    <Content Include="Management\Tasks\HomeTask.aspx" />
+    <Content Include="Management\Tasks\UpdateTask.aspx" />
+    <Content Include="Management\User\CreateUser.aspx" />
+    <Content Include="Management\User\UpdateUser.aspx" />
+    <Content Include="Management\User\UserHome.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -75,10 +82,91 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="User\HomeUser.aspx" />
+    <Content Include="User\Task\UserHomeTask.aspx" />
+    <Content Include="User\User\HomeUser.aspx" />
+    <Content Include="User\User\UpdateUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Management\HomeManagement.aspx.cs">
+      <DependentUpon>HomeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\HomeManagement.aspx.designer.cs">
+      <DependentUpon>HomeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\AddTask.aspx.cs">
+      <DependentUpon>AddTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\AddTask.aspx.designer.cs">
+      <DependentUpon>AddTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\HomeTask.aspx.cs">
+      <DependentUpon>HomeTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\HomeTask.aspx.designer.cs">
+      <DependentUpon>HomeTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\UpdateTask.aspx.cs">
+      <DependentUpon>UpdateTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\UpdateTask.aspx.designer.cs">
+      <DependentUpon>UpdateTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\HomeUser.aspx.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\HomeUser.aspx.designer.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Task\UserHomeTask.aspx.cs">
+      <DependentUpon>UserHomeTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Task\UserHomeTask.aspx.designer.cs">
+      <DependentUpon>UserHomeTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User\HomeUser.aspx.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User\HomeUser.aspx.designer.cs">
+      <DependentUpon>HomeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Subscriber\" />
@@ -87,6 +175,10 @@
     <ProjectReference Include="..\AlarmModel\AlarmModel.csproj">
       <Project>{8c7eb796-3295-4aa6-b3c1-c4bc150ecd7c}</Project>
       <Name>AlarmModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthCareWCFServices\HealthCareWCFServices.csproj">
+      <Project>{63165ffe-d687-4dd5-ba12-b401d6a5c562}</Project>
+      <Name>HealthCareWCFServices</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
