@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeManagement.master.cs" Inherits="HealthWebUI.Management.HomeManagement1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/MainStyle.css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="mainBody">
+
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="img-responsive" style="height:100px; width:100px;" src="~/Images/Logo.png"/>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="font-family:'Microsoft Sans Serif'; font-size:x-large;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="~/Management/HomeManagement.aspx">Home </a></li>
+                        <li><a href="~/Management/Tasks/HomeTask.aspx">Tasks </a></li>
+                        <li><a href="~//Management/User/UserHome.aspx">Users </a></li>
+                        <li><a> Contact </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="row" id="mainContainer">
+            <div class="col-md-10 col-md-offset-1" id="middleContainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
