@@ -76,7 +76,6 @@
     <Content Include="Images\backgroundforallpages.jpg" />
     <Content Include="Images\Logo.png" />
     <Content Include="Images\nav.jpg" />
-    <Content Include="Management\HomeManagement.aspx" />
     <Content Include="Management\Tasks\AddTask.aspx" />
     <Content Include="Management\Tasks\HomeTasks.aspx" />
     <Content Include="Management\Tasks\UpdateTask.aspx" />
@@ -166,13 +165,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Management\HomeManagement.aspx.cs">
-      <DependentUpon>HomeManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Management\HomeManagement.aspx.designer.cs">
-      <DependentUpon>HomeManagement.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Management\HomeManagement.Master.cs">
       <DependentUpon>HomeManagement.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,6 +266,10 @@
     <ProjectReference Include="..\AlarmModel\AlarmModel.csproj">
       <Project>{8c7eb796-3295-4aa6-b3c1-c4bc150ecd7c}</Project>
       <Name>AlarmModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HealthCareModel\HealthCareModel.csproj">
+      <Project>{a0c45089-b9b9-4974-8d88-6c55b8218d39}</Project>
+      <Name>HealthCareModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\HealthCareWCFServices\HealthCareWCFServices.csproj">
       <Project>{63165ffe-d687-4dd5-ba12-b401d6a5c562}</Project>
