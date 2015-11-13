@@ -16,11 +16,12 @@ namespace HealthCareModel.DBHandler
         void updateAlarm(string name, string type, string time, string location, string status);
 
         //get alarm
-
         Alarm getAlarm(string name);
 
         //get all alarms
-
         List<Alarm> getAlarms();
+
+        //delete alarm
+        void deleteAlarm(string name);        
     }
 }

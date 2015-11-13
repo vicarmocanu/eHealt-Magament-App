@@ -24,6 +24,24 @@ namespace HealthCareModel.DBHandler
                 db.SubmitChanges();
             }
         }
+
+        //delete SubTask
+        public void deleteSubTask(int id)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                var subTask = new SubTask();
+
+                subTask = db.SubTasks.SingleOrDefault(targetSubTask => targetSubTask.id == id);
+
+                if (subTask != null) ;
+                {
+                    db.SubTasks.DeleteOnSubmit(subTask);
+                    db.SubmitChanges();
+                }
+            }
+        }
+         
         //get SubTask
         public SubTask getSubtask(int taskId)
         {
@@ -69,8 +87,6 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
-
-        //delete SubTask
     }
 
 }

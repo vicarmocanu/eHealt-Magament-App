@@ -8,7 +8,7 @@ namespace HealthCareModel.DBHandler
 {
     class TaskHandler : ITaskHandler
     {
-        //create Task
+        //create task
         public void createTask(string taskName, string status, string description)
         {
             using (var db = new HealthModelsDataContext())
@@ -23,7 +23,7 @@ namespace HealthCareModel.DBHandler
                 db.SubmitChanges();
             }
         }
-        //Get Task?
+        //get task
         public Task getTask(string taskName)
         {
             var task = new Task();
@@ -36,7 +36,8 @@ namespace HealthCareModel.DBHandler
 
             return task;
         }
-        //Get Tasks?
+
+        //get tasks
         public List<Task> getTasks()
         {
             List<Task> tasks = new List<Task>();
@@ -49,7 +50,8 @@ namespace HealthCareModel.DBHandler
 
             return tasks;
         }
-        //update Task?
+
+        //update task
         public void updateTask(string taskName, string status, string description)
         {
             var task = new Task();
@@ -68,7 +70,25 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
-        //delete Task?
+
+        //delete task
+        public void deleteTask(string taskName)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                var task = new Task();
+
+                task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+
+                if(task != null)
+                {
+                    db.Tasks.DeleteOnSubmit(task);
+                    db.SubmitChanges();
+                }
+            }
+        }
+
+        
 
     }
 }

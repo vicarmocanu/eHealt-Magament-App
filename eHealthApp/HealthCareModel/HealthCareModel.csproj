@@ -42,11 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlHandler\AlarmControl.cs" />
+    <Compile Include="ControlHandler\ExtendedControl.cs" />
     <Compile Include="ControlHandler\SubTaskControl.cs" />
     <Compile Include="ControlHandler\TaskControl.cs" />
     <Compile Include="ControlHandler\UserControl.cs" />
     <Compile Include="DBHandler\AlarmHandler.cs" />
+    <Compile Include="DBHandler\AssignedTaskHandler.cs" />
+    <Compile Include="DBHandler\IAlarmAttendance.cs" />
+    <Compile Include="DBHandler\IAlarmCount.cs" />
     <Compile Include="DBHandler\IAlarmHandler.cs" />
+    <Compile Include="DBHandler\IAssignedTaskHandler.cs" />
     <Compile Include="DBHandler\ISubTaskHandler.cs" />
     <Compile Include="DBHandler\ITaskHandler.cs" />
     <Compile Include="DBHandler\IUserHandler.cs" />

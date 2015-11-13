@@ -15,11 +15,12 @@ namespace HealthCareModel.DBHandler
         void updateSubtask(int taskId, string description, string status);
 
         //get subtask
-
         SubTask getSubtask(int taskId);
 
         //get all subtasks
-
         List<SubTask> getSubtasks();
+
+        //delete subtask
+        void deleteSubTask(int id);
     }
 }

@@ -23,6 +23,7 @@ namespace HealthCareModel.DBHandler
                 alarm.status = status;
             }
         }
+
         //get Alarm
         public Alarm getAlarm(string name)
         {
@@ -36,7 +37,8 @@ namespace HealthCareModel.DBHandler
 
             return alarm;
         }
-        //get Alarms?????
+
+        //get Alarms
         public List<Alarm> getAlarms()
         {
             List<Alarm> alarms = new List<Alarm>();
@@ -49,6 +51,7 @@ namespace HealthCareModel.DBHandler
 
             return alarms;
         }
+
         //update Alarm
         public void updateAlarm(string name, string type, string time, string location, string status)
         {
@@ -71,6 +74,21 @@ namespace HealthCareModel.DBHandler
             }
         }
 
-       
+        //delete alarm
+        public void deleteAlarm(string name)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                var alarm = new Alarm();
+
+                alarm = db.Alarms.SingleOrDefault(targetAlarm => targetAlarm.name.Equals(name));
+
+                if(alarm!=null)
+                {
+                    db.Alarms.DeleteOnSubmit(alarm);
+                    db.SubmitChanges();
+                }
+            }
+        }
     }
 }

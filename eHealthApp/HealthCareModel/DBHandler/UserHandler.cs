@@ -9,7 +9,7 @@ namespace HealthCareModel.DBHandler
 {
     class UserHandler : IUserHandler
     {
-        //create USER
+        //create user
         public void createUser(string firstName, string lastName, string username, string password, string role)
         {
             using (var db = new HealthModelsDataContext())
@@ -27,7 +27,7 @@ namespace HealthCareModel.DBHandler
             }
         }
 
-        //get User
+        //get user
         public User getUser(string username)
         {
             var user = new User();
@@ -40,7 +40,8 @@ namespace HealthCareModel.DBHandler
 
             return user;
         }
-        //Get Users
+
+        //get users
         public List<User> getUsers()
         {
             List<User> users = new List<User>();
@@ -53,7 +54,8 @@ namespace HealthCareModel.DBHandler
 
             return users;
         }
-        //Update User
+
+        //update user
         public void updateUser(string firstName, string lastName, string username, string password, string role)
         {
             var user = new User();
@@ -74,7 +76,21 @@ namespace HealthCareModel.DBHandler
             }
         }
 
-        //delete User??
+        //delete user
+        public void deleteUser(string username)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                var user = new User();
 
+                user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username));
+
+                if(user!=null)
+                {
+                    db.Users.DeleteOnSubmit(user);
+                    db.SubmitChanges();
+                }
+            }
+        }
     }
 }

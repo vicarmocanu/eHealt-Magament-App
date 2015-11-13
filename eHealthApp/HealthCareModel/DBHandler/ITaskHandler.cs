@@ -15,5 +15,7 @@ namespace HealthCareModel.DBHandler
         Task getTask(string taskName);
 
         List<Task> getTasks();
+
+        void deleteTask(string taskName);
     }
 }

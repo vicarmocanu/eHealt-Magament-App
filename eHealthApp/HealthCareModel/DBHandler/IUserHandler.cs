@@ -20,6 +20,9 @@ namespace HealthCareModel.DBHandler
 
         //get all users
         List<User> getUsers();
-       
+
+        //delete user
+        void deleteUser(string username);
+
     }
 }

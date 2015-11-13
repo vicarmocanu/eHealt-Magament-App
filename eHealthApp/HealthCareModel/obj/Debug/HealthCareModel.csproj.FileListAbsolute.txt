@@ -3,3 +3,8 @@ C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHeal
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.dll.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
