@@ -1,4 +1,4 @@
-﻿<%@ Page Title="InsertUser" Language="C#" MasterPageFile="~/Management/HomeManagement.Master" AutoEventWireup="true" CodeBehind="InsertUser.aspx.cs" Inherits="HealthWebUI.Management.User.InsertUser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Management/HomeManagement.Master" AutoEventWireup="true" CodeBehind="InsertUser.aspx.cs" Inherits="HealthWebUI.Management.User.InsertUser" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

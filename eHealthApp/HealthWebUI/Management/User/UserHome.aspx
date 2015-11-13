@@ -10,7 +10,6 @@
                 <ItemTemplate>
 
                     <div>
-
                         <b>First name:</b>
                         <asp:Label ID="fNameLabel" runat="server" Text='<%# Eval("FirstName") %>'></asp:Label>
                         <br />
@@ -22,9 +21,6 @@
                         <br />
                          <b>Password:</b>
                         <asp:Label ID="passwordLabel" runat="server" Text='<%# Eval("Password") %>'></asp:Label>
-                        <br />
-                         <b>E-mail:</b>
-                        <asp:Label ID="emailLabel" runat="server" Text='<%# Eval("Email") %>'></asp:Label>
                         <br />
                         <b>Role:</b>
                         <asp:Label ID="roleLabel" runat="server" Text='<%# Eval("Role") %>'></asp:Label>
