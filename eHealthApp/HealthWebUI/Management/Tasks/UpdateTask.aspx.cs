@@ -9,9 +9,28 @@ namespace HealthWebUI.Management.Tasks
 {
     public partial class UpdateTask : System.Web.UI.Page
     {
+
+        private static TaskServiceReference.TaskServiceClient taskService = new TaskServiceReference.TaskServiceClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void updateButton_Click(object sender, EventArgs e)
+        {
+            string taskName = Convert.ToString(this.txtTaskName.Text);
+            string status = Convert.ToString(this.txtStatus.Text);
+            string description = Convert.ToString(this.txtDescription.Text);
+
+            taskService.updateTask(taskName, status, description);
+
+            Response.Redirect("~/Management/Tasks/HomeTasks.aspx");
+        }
+
+        protected void cancelAll_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Management/Tasks/HomeTasks.aspx");
         }
     }
 }

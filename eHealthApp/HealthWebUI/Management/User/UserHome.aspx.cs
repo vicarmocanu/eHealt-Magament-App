@@ -28,7 +28,7 @@ namespace HealthWebUI.Management.User
             {
                case "updateUser":
                     string userName = Convert.ToString(e.CommandArgument);
-                    User["userName"] = userName; // nu inteleg ce se intampla aici. Merge cu UserControler.
+                    Session["userName"] = userName;
                     Response.Redirect("~/Management/User/UpdateUser.aspx");
                     break;
                    

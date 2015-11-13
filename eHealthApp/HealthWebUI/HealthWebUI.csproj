@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +49,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -56,16 +58,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -76,8 +76,10 @@
     <Content Include="Images\backgroundforallpages.jpg" />
     <Content Include="Images\Logo.png" />
     <Content Include="Images\nav.jpg" />
-    <Content Include="Management\Tasks\AddTask.aspx" />
+    <Content Include="Login\Error.aspx" />
+    <Content Include="Login\LogIn.aspx" />
     <Content Include="Management\Tasks\HomeTasks.aspx" />
+    <Content Include="Management\Tasks\InsertTask.aspx" />
     <Content Include="Management\Tasks\UpdateTask.aspx" />
     <Content Include="Management\User\InsertUser.aspx" />
     <Content Include="Management\User\UpdateUser.aspx" />
@@ -93,6 +95,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Login\LogInMaster.Master" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -165,6 +168,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LogInMaster.Master.cs">
+      <DependentUpon>LogInMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\LogInMaster.Master.designer.cs">
+      <DependentUpon>LogInMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Management\HomeManagement.Master.cs">
       <DependentUpon>HomeManagement.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,19 +196,19 @@
     <Compile Include="Management\HomeManagement.Master.designer.cs">
       <DependentUpon>HomeManagement.Master</DependentUpon>
     </Compile>
-    <Compile Include="Management\Tasks\AddTask.aspx.cs">
-      <DependentUpon>AddTask.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Management\Tasks\AddTask.aspx.designer.cs">
-      <DependentUpon>AddTask.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Management\Tasks\HomeTasks.aspx.cs">
       <DependentUpon>HomeTasks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Management\Tasks\HomeTasks.aspx.designer.cs">
       <DependentUpon>HomeTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\InsertTask.aspx.cs">
+      <DependentUpon>InsertTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\InsertTask.aspx.designer.cs">
+      <DependentUpon>InsertTask.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\Tasks\UpdateTask.aspx.cs">
       <DependentUpon>UpdateTask.aspx</DependentUpon>

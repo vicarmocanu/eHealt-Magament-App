@@ -1,16 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateTask.aspx.cs" Inherits="HealthWebUI.Management.Tasks.UpdateTask" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Management/HomeManagement.Master" AutoEventWireup="true" CodeBehind="UpdateTask.aspx.cs" Inherits="HealthWebUI.Management.Tasks.UpdateTask" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div class="row">
 
-<!DOCTYPE html>
+        <div class="col-md-7">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
+            <asp:Panel ID="UpdatePanel" runat="server" Font-Size="Medium" Font-Name="Arial">
+                <p>
+                    TaskName: 
+                    <br />
+                    <asp:TextBox id="txtTaskName" runat="server" Width="250px" />
+                    <br />
+                    Status:
+                    <br />
+                    <asp:TextBox ID="txtStatus" runat="server" Width="250px" />
+                    <br />
+                    Description:
+                    <br />
+                    <asp:TextBox ID="txtDescription" runat="server" Width="250px" />
+                    <br />
+                    <asp:Button ID="updateBtn" runat="server" Text="Update Task" ValidationGroup="save" OnClick="updateBtn_Click" />
+                    &nbsp;
+                    <asp:Button ID="cancelTask" runat="server" Text="Cancel task" OnClick="cancelTask_Click" />
+                    &nbsp;
+                    <asp:Button ID="cancelAll" runat="server" Text="Cancel/Return" OnClick="cancelAll_Click" />
+                </p>
+            </asp:Panel>
+        </div>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
