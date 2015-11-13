@@ -1,0 +1,4 @@
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.dll
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.pdb
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.dll
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.pdb

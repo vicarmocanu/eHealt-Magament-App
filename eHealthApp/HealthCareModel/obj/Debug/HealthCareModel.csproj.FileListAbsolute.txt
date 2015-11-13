@@ -3,4 +3,3 @@ C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHeal
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.csprojResolveAssemblyReference.cache

@@ -1,0 +1,7 @@
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.dll
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.pdb
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.dll
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.pdb
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
+C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb
