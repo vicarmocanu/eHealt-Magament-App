@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserHomeTask.aspx.cs" Inherits="HealthWebUI.User.Task.UserHomeTask" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MyUser.aspx.cs" Inherits="HealthWebUI.User.User.HomeUser" %>
 
 <!DOCTYPE html>
 

@@ -161,10 +161,10 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Styles\MainStyle.css" />
-    <Content Include="User\HomeUser.aspx" />
-    <Content Include="User\Task\UserHomeTask.aspx" />
-    <Content Include="User\User\HomeUser.aspx" />
-    <Content Include="User\User\UpdateUser.aspx" />
+    <Content Include="Users\MyUserHome.aspx" />
+    <Content Include="Users\Task\MyUserTasks.aspx" />
+    <Content Include="Users\User\MyUser.aspx" />
+    <Content Include="Users\User\UpdateUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -254,32 +254,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="User\HomeUser.aspx.cs">
-      <DependentUpon>HomeUser.aspx</DependentUpon>
+    <Compile Include="Users\MyUserHome.aspx.cs">
+      <DependentUpon>MyUserHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\HomeUser.aspx.designer.cs">
-      <DependentUpon>HomeUser.aspx</DependentUpon>
+    <Compile Include="Users\MyUserHome.aspx.designer.cs">
+      <DependentUpon>MyUserHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Task\UserHomeTask.aspx.cs">
-      <DependentUpon>UserHomeTask.aspx</DependentUpon>
+    <Compile Include="Users\Task\MyUserTasks.aspx.cs">
+      <DependentUpon>MyUserTasks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Task\UserHomeTask.aspx.designer.cs">
-      <DependentUpon>UserHomeTask.aspx</DependentUpon>
+    <Compile Include="Users\Task\MyUserTasks.aspx.designer.cs">
+      <DependentUpon>MyUserTasks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\User\HomeUser.aspx.cs">
-      <DependentUpon>HomeUser.aspx</DependentUpon>
+    <Compile Include="Users\User\MyUser.aspx.cs">
+      <DependentUpon>MyUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\User\HomeUser.aspx.designer.cs">
-      <DependentUpon>HomeUser.aspx</DependentUpon>
+    <Compile Include="Users\User\MyUser.aspx.designer.cs">
+      <DependentUpon>MyUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\User\UpdateUser.aspx.cs">
+    <Compile Include="Users\User\UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\User\UpdateUser.aspx.designer.cs">
+    <Compile Include="Users\User\UpdateUser.aspx.designer.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

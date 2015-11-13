@@ -40,7 +40,7 @@ namespace HealthWebUI.Management.Tasks
             }
         }
 
-        protected void createButton_Click(object sender, RepeaterCommandEventArgs e)
+        protected void createButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Management/Tasks/InsertTask.aspx");
         }

@@ -13,5 +13,10 @@ namespace HealthWebUI.Login
         {
 
         }
+
+        protected void returnButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login/LogIn.aspx");
+        }
     }
 }

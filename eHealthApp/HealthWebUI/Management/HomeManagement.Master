@@ -31,9 +31,9 @@
 
                 <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="font-family:'Microsoft Sans Serif'; font-size:x-large;">
                     <ul class="nav navbar-nav">
-                        <li><a href="~/Management/Management.aspx">Home </a></li>
-                        <li><a href="~/Management/Tasks/HomeTask.aspx">Tasks </a></li>
-                        <li><a href="~//Management/User/UserHome.aspx">Users </a></li>
+                        <li><a>Home </a></li>
+                        <li><a href="HomeTasks.aspx">Tasks </a></li>
+                        <li><a href="UserHome.aspx">Users</a></li>
                         <li><a> Contact </a></li>
                     </ul>
                 </div>
