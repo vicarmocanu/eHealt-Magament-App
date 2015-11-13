@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HealthDB" Class="HealthModelsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=THERAK\SQLEXPRESS;Initial Catalog=HealthDB;Integrated Security=True" SettingsObjectName="eHealthApp.Properties.Settings" SettingsPropertyName="HealthDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MDU\SQLEXPRESS;Initial Catalog=HealthDB;Integrated Security=True" SettingsObjectName="eHealthApp.Properties.Settings" SettingsPropertyName="HealthDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AlarmAttendance" Member="AlarmAttendances">
     <Type Name="AlarmAttendance">
       <Column Name="alarmId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

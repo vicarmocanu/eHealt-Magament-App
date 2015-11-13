@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeTask.aspx.cs" Inherits="HealthWebUI.Management.Tasks.HomeTask" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="HealthWebUI.Views.LogIn" %>
 
 <!DOCTYPE html>
 
