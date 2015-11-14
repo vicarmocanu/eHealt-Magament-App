@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using HealthCareModel.Object_Models;
 
 namespace HealthCareModel.DBHandler
 {
     class SubTaskHandler : ISubTaskHandler
     {
-        //create Task
+        //create SubTask
         public void createSubtask(int taskId, string description, string status)
         {
             using (var db = new HealthModelsDataContext())
@@ -30,11 +29,9 @@ namespace HealthCareModel.DBHandler
         {
             using (var db = new HealthModelsDataContext())
             {
-                var subTask = new SubTask();
+                SubTask subTask = db.SubTasks.SingleOrDefault(targetSubTask => targetSubTask.id == id);
 
-                subTask = db.SubTasks.SingleOrDefault(targetSubTask => targetSubTask.id == id);
-
-                if (subTask != null) ;
+                if (subTask != null)
                 {
                     db.SubTasks.DeleteOnSubmit(subTask);
                     db.SubmitChanges();
@@ -68,6 +65,7 @@ namespace HealthCareModel.DBHandler
 
             return subtask;
         }
+
         //update SubTask
         public void updateSubtask(int taskId, string description, string status)
         {
@@ -87,6 +85,25 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
+
+        //get specific task subtasks
+        public List<SubTask> getTaskSubTasks(string taskName)
+        {
+            List<SubTask> taskSubTasks = new List<SubTask>();
+
+            using (var db = new HealthModelsDataContext())
+            {
+                Task task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                if (task != null)
+                {
+                    var query = db.SubTasks.Where(subTask => subTask.taskId == task.id).ToList();
+                    taskSubTasks = query;
+                }
+            }
+
+            return taskSubTasks;
+        }
+
     }
 
 }

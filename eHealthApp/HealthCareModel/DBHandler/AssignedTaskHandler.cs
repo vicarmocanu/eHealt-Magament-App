@@ -8,6 +8,64 @@ namespace HealthCareModel.DBHandler
 {
     class AssignedTaskHandler:IAssignedTaskHandler
     {
+        //create assigned tasks
+        public void createAssignedTask(int taskId, int userId)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                var assignedTask = new AssignedTask();
+
+                assignedTask.taskId = taskId;
+                assignedTask.userId = userId;
+
+                db.AssignedTasks.InsertOnSubmit(assignedTask);
+                db.SubmitChanges();
+            }
+        }
+
+        //delete assigned tasks
+        public void deleteAssignedTask(int taskId, int userId)
+        {
+            using (var db = new HealthModelsDataContext())
+            {
+                AssignedTask assignedTask = db.AssignedTasks.SingleOrDefault(assigned => assigned.taskId == taskId && assigned.userId == userId);
+
+                if (assignedTask != null) 
+                {
+                    db.AssignedTasks.DeleteOnSubmit(assignedTask);
+                    db.SubmitChanges();
+                }
+            }
+        }
+
+        //to get the users assigned to a particular task
+        public List<User> getTaskUsers(string taskName)
+        {
+            List<User> taskUsers = new List<User>();
+
+            using (var db = new HealthModelsDataContext())
+            {
+                var taskQuery = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                if(taskQuery != null)
+                {
+                    Task task = taskQuery;
+                    int taskId = task.id;
+
+                    var query = db.AssignedTasks.Where(assigned => assigned.taskId == taskId).ToList();
+                    List<AssignedTask> assignedTaskUsers = query;
+
+                    foreach(AssignedTask assignedTask in assignedTaskUsers)
+                    {
+                        int userId = assignedTask.userId;
+                        User taskUser = db.Users.SingleOrDefault(user => user.id == userId);
+                        taskUsers.Add(taskUser);
+                    }
+                }
+            }
+
+            return taskUsers;
+        }
+
         //get user tasks
         public List<Task> getUserTasks(string username)
         {

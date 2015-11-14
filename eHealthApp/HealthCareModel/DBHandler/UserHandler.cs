@@ -81,9 +81,7 @@ namespace HealthCareModel.DBHandler
         {
             using (var db = new HealthModelsDataContext())
             {
-                var user = new User();
-
-                user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username));
+                User user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username));
 
                 if(user!=null)
                 {

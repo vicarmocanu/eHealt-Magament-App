@@ -46,10 +46,12 @@
     <Compile Include="ControlHandler\SubTaskControl.cs" />
     <Compile Include="ControlHandler\TaskControl.cs" />
     <Compile Include="ControlHandler\UserControl.cs" />
+    <Compile Include="DBHandler\AlarmAttendanceHandler.cs" />
+    <Compile Include="DBHandler\AlarmCountHandler.cs" />
     <Compile Include="DBHandler\AlarmHandler.cs" />
     <Compile Include="DBHandler\AssignedTaskHandler.cs" />
-    <Compile Include="DBHandler\IAlarmAttendance.cs" />
-    <Compile Include="DBHandler\IAlarmCount.cs" />
+    <Compile Include="DBHandler\IAlarmAttendanceHandler.cs" />
+    <Compile Include="DBHandler\IAlarmCountHandler.cs" />
     <Compile Include="DBHandler\IAlarmHandler.cs" />
     <Compile Include="DBHandler\IAssignedTaskHandler.cs" />
     <Compile Include="DBHandler\ISubTaskHandler.cs" />

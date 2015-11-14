@@ -21,6 +21,9 @@ namespace HealthCareModel.DBHandler
                 alarm.time = DateTime.Now;
                 alarm.location = location;
                 alarm.status = status;
+
+                db.Alarms.InsertOnSubmit(alarm);
+                db.SubmitChanges();
             }
         }
 
@@ -79,9 +82,7 @@ namespace HealthCareModel.DBHandler
         {
             using (var db = new HealthModelsDataContext())
             {
-                var alarm = new Alarm();
-
-                alarm = db.Alarms.SingleOrDefault(targetAlarm => targetAlarm.name.Equals(name));
+                Alarm alarm =  db.Alarms.SingleOrDefault(targetAlarm => targetAlarm.name.Equals(name));
 
                 if(alarm!=null)
                 {

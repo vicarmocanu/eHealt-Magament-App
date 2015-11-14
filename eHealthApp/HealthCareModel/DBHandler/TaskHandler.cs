@@ -76,9 +76,7 @@ namespace HealthCareModel.DBHandler
         {
             using (var db = new HealthModelsDataContext())
             {
-                var task = new Task();
-
-                task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                Task task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
 
                 if(task != null)
                 {
@@ -86,6 +84,20 @@ namespace HealthCareModel.DBHandler
                     db.SubmitChanges();
                 }
             }
+        }
+
+        //status filter
+        public List<Task> taskStatusFilter(string status)
+        {
+            List<Task> filteredTasks = new List<Task>();
+
+            using (var db = new HealthModelsDataContext())
+            {
+                var query = db.Tasks.Where(targetTask => targetTask.status.Equals(status)).ToList();
+                filteredTasks = query;
+            }
+
+            return filteredTasks;
         }
 
         

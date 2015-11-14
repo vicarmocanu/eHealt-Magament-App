@@ -22,5 +22,8 @@ namespace HealthCareModel.DBHandler
 
         //delete subtask
         void deleteSubTask(int id);
+
+        //get specific task subtasks
+        List<SubTask> getTaskSubTasks(string taskName);
     }
 }
