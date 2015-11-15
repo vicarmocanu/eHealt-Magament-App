@@ -24,5 +24,7 @@ namespace HealthCareModel.DBHandler
         //delete user
         void deleteUser(string username);
 
+        //login
+        string userLogIn(string username, string password);
     }
 }

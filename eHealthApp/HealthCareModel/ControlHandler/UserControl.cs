@@ -35,5 +35,10 @@ namespace HealthCareModel.ControlHandler
         {
             userHandler.deleteUser(username);
         }
+
+        public static string userLogIn(string username, string password)
+        {
+            return userHandler.userLogIn(username, password);
+        }
     }
 }

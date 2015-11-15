@@ -10,7 +10,7 @@ namespace HealthCareModel.DBHandler
     class AlarmHandler : IAlarmHandler
     {
         //create Alarm
-        public void createAlarm(string name, string type, string time, string location, string status)
+        public void createAlarm(string name, string type, string location, string status)
         {
             using (var db = new HealthModelsDataContext())
             {

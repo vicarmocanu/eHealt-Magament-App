@@ -12,9 +12,9 @@ namespace HealthCareModel.Controller
     {
         private static IAlarmHandler alarmHandler = new AlarmHandler();
 
-        public static void createAlarm(string name, string type, string time, string location, string status)
+        public static void createAlarm(string name, string type, string location, string status)
         {
-            alarmHandler.createAlarm(name, type, time, location, status);
+            alarmHandler.createAlarm(name, type, location, status);
         }
 
         public static void updateAlarm(string name, string type, string time, string location, string status)

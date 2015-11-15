@@ -90,5 +90,22 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
+
+        public string userLogIn(string username, string password)
+        {
+            string result = "Fail";
+
+            using (var db = new HealthModelsDataContext())
+            {
+                User user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username) && targetUser.password.Equals(password));
+
+                if(user!=null)
+                {
+                    result = user.role;
+                }
+            }
+
+            return result;
+        }
     }
 }
