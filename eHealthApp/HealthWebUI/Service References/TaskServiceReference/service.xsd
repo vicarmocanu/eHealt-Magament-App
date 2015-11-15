@@ -55,4 +55,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="deleteTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="taskName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteTaskResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taskStatusFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="taskStatusFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HealthCareWCFServices" minOccurs="0" name="taskStatusFilterResult" nillable="true" type="q3:ArrayOfTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

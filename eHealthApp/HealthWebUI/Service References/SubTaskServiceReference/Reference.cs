@@ -16,10 +16,10 @@ namespace HealthWebUI.SubTaskServiceReference {
     public interface ISubTaskService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/createSubtask", ReplyAction="http://tempuri.org/ISubTaskService/createSubtaskResponse")]
-        void createSubtask(int taskId, string description, string status);
+        void createSubtask(string taskName, string description, string status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/createSubtask", ReplyAction="http://tempuri.org/ISubTaskService/createSubtaskResponse")]
-        System.Threading.Tasks.Task createSubtaskAsync(int taskId, string description, string status);
+        System.Threading.Tasks.Task createSubtaskAsync(string taskName, string description, string status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/updateSubtask", ReplyAction="http://tempuri.org/ISubTaskService/updateSubtaskResponse")]
         void updateSubtask(int taskId, string description, string status);
@@ -38,6 +38,18 @@ namespace HealthWebUI.SubTaskServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getSubTasks", ReplyAction="http://tempuri.org/ISubTaskService/getSubTasksResponse")]
         System.Threading.Tasks.Task<HealthCareWCFServices.SubTask[]> getSubTasksAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/deleteSubTask", ReplyAction="http://tempuri.org/ISubTaskService/deleteSubTaskResponse")]
+        void deleteSubTask(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/deleteSubTask", ReplyAction="http://tempuri.org/ISubTaskService/deleteSubTaskResponse")]
+        System.Threading.Tasks.Task deleteSubTaskAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getTaskSubTasks", ReplyAction="http://tempuri.org/ISubTaskService/getTaskSubTasksResponse")]
+        HealthCareWCFServices.SubTask[] getTaskSubTasks(string taskName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getTaskSubTasks", ReplyAction="http://tempuri.org/ISubTaskService/getTaskSubTasksResponse")]
+        System.Threading.Tasks.Task<HealthCareWCFServices.SubTask[]> getTaskSubTasksAsync(string taskName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,12 +79,12 @@ namespace HealthWebUI.SubTaskServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void createSubtask(int taskId, string description, string status) {
-            base.Channel.createSubtask(taskId, description, status);
+        public void createSubtask(string taskName, string description, string status) {
+            base.Channel.createSubtask(taskName, description, status);
         }
         
-        public System.Threading.Tasks.Task createSubtaskAsync(int taskId, string description, string status) {
-            return base.Channel.createSubtaskAsync(taskId, description, status);
+        public System.Threading.Tasks.Task createSubtaskAsync(string taskName, string description, string status) {
+            return base.Channel.createSubtaskAsync(taskName, description, status);
         }
         
         public void updateSubtask(int taskId, string description, string status) {
@@ -97,6 +109,22 @@ namespace HealthWebUI.SubTaskServiceReference {
         
         public System.Threading.Tasks.Task<HealthCareWCFServices.SubTask[]> getSubTasksAsync() {
             return base.Channel.getSubTasksAsync();
+        }
+        
+        public void deleteSubTask(int id) {
+            base.Channel.deleteSubTask(id);
+        }
+        
+        public System.Threading.Tasks.Task deleteSubTaskAsync(int id) {
+            return base.Channel.deleteSubTaskAsync(id);
+        }
+        
+        public HealthCareWCFServices.SubTask[] getTaskSubTasks(string taskName) {
+            return base.Channel.getTaskSubTasks(taskName);
+        }
+        
+        public System.Threading.Tasks.Task<HealthCareWCFServices.SubTask[]> getTaskSubTasksAsync(string taskName) {
+            return base.Channel.getTaskSubTasksAsync(taskName);
         }
     }
 }

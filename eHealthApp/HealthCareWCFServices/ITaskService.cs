@@ -22,6 +22,12 @@ namespace HealthCareWCFServices
 
         [OperationContract]
         List<Task> getTasks();
+
+        [OperationContract]
+        void deleteTask(string taskName);
+
+        [OperationContract]
+        List<Task> taskStatusFilter(string status);
     }
 
     [DataContract]

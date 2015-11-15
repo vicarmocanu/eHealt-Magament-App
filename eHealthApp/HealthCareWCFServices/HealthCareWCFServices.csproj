@@ -45,6 +45,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlarmService.cs" />
+    <Compile Include="ExtendedService.cs" />
+    <Compile Include="IAlarmService.cs" />
+    <Compile Include="IExtendedService.cs" />
     <Compile Include="ISubTaskService.cs" />
     <Compile Include="ITaskService.cs" />
     <Compile Include="IUserService.cs" />
@@ -67,16 +71,6 @@
     <None Include="obj\Release\HealthCareWCFServices.csprojResolveAssemblyReference.cache" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarmModel\AlarmModel.csproj">
-      <Project>{8c7eb796-3295-4aa6-b3c1-c4bc150ecd7c}</Project>
-      <Name>AlarmModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HealthCareModel\HealthCareModel.csproj">
-      <Project>{a0c45089-b9b9-4974-8d88-6c55b8218d39}</Project>
-      <Name>HealthCareModel</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +81,12 @@
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HealthCareModel\HealthCareModel.csproj">
+      <Project>{a0c45089-b9b9-4974-8d88-6c55b8218d39}</Project>
+      <Name>HealthCareModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -38,6 +38,12 @@ namespace HealthWebUI.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/getUsers", ReplyAction="http://tempuri.org/IUserService/getUsersResponse")]
         System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/deleteUser", ReplyAction="http://tempuri.org/IUserService/deleteUserResponse")]
+        void deleteUser(string userName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/deleteUser", ReplyAction="http://tempuri.org/IUserService/deleteUserResponse")]
+        System.Threading.Tasks.Task deleteUserAsync(string userName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +103,14 @@ namespace HealthWebUI.UserServiceReference {
         
         public System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getUsersAsync() {
             return base.Channel.getUsersAsync();
+        }
+        
+        public void deleteUser(string userName) {
+            base.Channel.deleteUser(userName);
+        }
+        
+        public System.Threading.Tasks.Task deleteUserAsync(string userName) {
+            return base.Channel.deleteUserAsync(userName);
         }
     }
 }

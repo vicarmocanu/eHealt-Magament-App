@@ -31,6 +31,18 @@
   <wsdl:message name="ISubTaskService_getSubTasks_OutputMessage">
     <wsdl:part name="parameters" element="tns:getSubTasksResponse" />
   </wsdl:message>
+  <wsdl:message name="ISubTaskService_deleteSubTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSubTask" />
+  </wsdl:message>
+  <wsdl:message name="ISubTaskService_deleteSubTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSubTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISubTaskService_getTaskSubTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTaskSubTasks" />
+  </wsdl:message>
+  <wsdl:message name="ISubTaskService_getTaskSubTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTaskSubTasksResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISubTaskService">
     <wsdl:operation name="createSubtask">
       <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/createSubtask" message="tns:ISubTaskService_createSubtask_InputMessage" />
@@ -47,6 +59,14 @@
     <wsdl:operation name="getSubTasks">
       <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/getSubTasks" message="tns:ISubTaskService_getSubTasks_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/getSubTasksResponse" message="tns:ISubTaskService_getSubTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSubTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/deleteSubTask" message="tns:ISubTaskService_deleteSubTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/deleteSubTaskResponse" message="tns:ISubTaskService_deleteSubTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaskSubTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/getTaskSubTasks" message="tns:ISubTaskService_getTaskSubTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/getTaskSubTasksResponse" message="tns:ISubTaskService_getTaskSubTasks_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISubTaskService" type="tns:ISubTaskService">
@@ -80,6 +100,24 @@
     </wsdl:operation>
     <wsdl:operation name="getSubTasks">
       <soap:operation soapAction="http://tempuri.org/ISubTaskService/getSubTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSubTask">
+      <soap:operation soapAction="http://tempuri.org/ISubTaskService/deleteSubTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaskSubTasks">
+      <soap:operation soapAction="http://tempuri.org/ISubTaskService/getTaskSubTasks" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

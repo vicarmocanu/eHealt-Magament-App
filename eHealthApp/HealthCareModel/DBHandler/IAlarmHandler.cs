@@ -13,7 +13,7 @@ namespace HealthCareModel.DBHandler
         void createAlarm(string name, string type, string location, string status);
 
         //update alarm
-        void updateAlarm(string name, string type, string time, string location, string status);
+        void updateAlarm(string name, string type, string location, string status);
 
         //get alarm
         Alarm getAlarm(string name);

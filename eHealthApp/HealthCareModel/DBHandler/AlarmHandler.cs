@@ -56,7 +56,7 @@ namespace HealthCareModel.DBHandler
         }
 
         //update Alarm
-        public void updateAlarm(string name, string type, string time, string location, string status)
+        public void updateAlarm(string name, string type, string location, string status)
         {
             var alarm = new Alarm();
 

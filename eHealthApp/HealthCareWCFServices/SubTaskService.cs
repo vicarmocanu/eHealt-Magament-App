@@ -17,14 +17,15 @@ namespace HealthCareWCFServices
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
         private static readonly System.Object obj5 = new System.Object();
+        private static readonly System.Object obj6 = new System.Object();
 
-        public void createSubtask(int taskId, string description, string status)
+        public void createSubtask(string taskName, string description, string status)
         {
             if (System.Threading.Monitor.TryEnter(obj1, 45000))
             {
                 try
                 {
-                    SubTaskControl.createSubtask(taskId, description, status);
+                    SubTaskControl.createSubtask(taskName, description, status);
                 }
                 finally
                 {
@@ -102,6 +103,58 @@ namespace HealthCareWCFServices
                 finally
                 {
                     System.Threading.Monitor.Exit(obj4);
+                }
+            }
+
+            return subTsk;
+        }
+
+        public void deleteSubTask(int id)
+        {
+            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    SubTaskControl.deleteSubTask(id);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+        }
+
+        public List<SubTask> getTaskSubTasks(string taskName)
+        {
+            List<SubTask> subTsk = new List<SubTask>();
+
+            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            {
+                try
+                {
+
+                    List<HealthCareModel.Object_Models.SubTask> returnList = SubTaskControl.getTaskSubTasks(taskName);  
+
+                    if (returnList.Count != 0)
+                    {
+                        foreach (HealthCareModel.Object_Models.SubTask subTskHost in returnList)
+                        {
+                            SubTask serviceSubTask = new SubTask();
+
+                            serviceSubTask.TaskId = subTskHost.taskId;
+                            serviceSubTask.Status = subTskHost.status;
+                            serviceSubTask.Description = subTskHost.description;
+
+                            subTsk.Add(serviceSubTask);
+                        }
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj6);
                 }
             }
 

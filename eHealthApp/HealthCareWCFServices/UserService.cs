@@ -11,7 +11,7 @@ namespace HealthCareWCFServices
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "UserService" in both code and config file together.
     public class UserService : IUserService
     {
-        
+
         private static readonly System.Object obj1 = new System.Object();
         private static readonly System.Object obj2 = new System.Object();
         private static readonly System.Object obj3 = new System.Object();
@@ -62,7 +62,7 @@ namespace HealthCareWCFServices
                     serviceUser.Role = UserControl.getUser(userName).role;
 
                 }
-                catch(NullReferenceException)
+                catch (NullReferenceException)
                 {
 
                 }
@@ -83,7 +83,7 @@ namespace HealthCareWCFServices
                 try
                 {
 
-                    List<HealthCareModel.Object_Models.User>  returnList = UserControl.getUsers();
+                    List<HealthCareModel.Object_Models.User> returnList = UserControl.getUsers();
 
                     if (returnList.Count != 0)
                     {
@@ -113,5 +113,21 @@ namespace HealthCareWCFServices
             return users;
         }
 
+        public void deleteUser(string userName)
+        {
+            User serviceUser = new User();
+
+            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    UserControl.deleteUser(userName);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace HealthCareWCFServices
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
         private static readonly System.Object obj5 = new System.Object();
+        private static readonly System.Object obj6 = new System.Object();
 
         public void createTask(string taskName, string status, string description)
         {
@@ -106,5 +107,58 @@ namespace HealthCareWCFServices
 
             return tsk;
         }
+
+        public void deleteTask(string taskName)
+        {
+            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    TaskControl.deleteTask(taskName);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+        }
+
+        public List<Task> taskStatusFilter(string status)
+        {
+            List<Task> tsk = new List<Task>();
+
+            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            {
+                try
+                {
+
+                    List<HealthCareModel.Object_Models.Task> returnList = TaskControl.taskStatusFilter(status);
+
+                    if (returnList.Count != 0)
+                    {
+                        foreach (HealthCareModel.Object_Models.Task tskHost in returnList)
+                        {
+                            Task serviceTask = new Task();
+
+                            serviceTask.TaskName = tskHost.taskName;
+                            serviceTask.Status = tskHost.status;
+                            serviceTask.Description = tskHost.description;
+
+                            tsk.Add(serviceTask);
+                        }
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj6);
+                }
+            }
+
+            return tsk;
+        }
+
     }
 }

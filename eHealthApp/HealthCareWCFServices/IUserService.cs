@@ -22,6 +22,9 @@ namespace HealthCareWCFServices
 
         [OperationContract]
         List<User> getUsers();
+
+        [OperationContract]
+        void deleteUser(string userName);
     }
 
     [DataContract]

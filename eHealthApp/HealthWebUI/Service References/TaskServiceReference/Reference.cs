@@ -38,6 +38,18 @@ namespace HealthWebUI.TaskServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskService/getTasks", ReplyAction="http://tempuri.org/ITaskService/getTasksResponse")]
         System.Threading.Tasks.Task<HealthCareWCFServices.Task[]> getTasksAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskService/deleteTask", ReplyAction="http://tempuri.org/ITaskService/deleteTaskResponse")]
+        void deleteTask(string taskName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskService/deleteTask", ReplyAction="http://tempuri.org/ITaskService/deleteTaskResponse")]
+        System.Threading.Tasks.Task deleteTaskAsync(string taskName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskService/taskStatusFilter", ReplyAction="http://tempuri.org/ITaskService/taskStatusFilterResponse")]
+        HealthCareWCFServices.Task[] taskStatusFilter(string status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskService/taskStatusFilter", ReplyAction="http://tempuri.org/ITaskService/taskStatusFilterResponse")]
+        System.Threading.Tasks.Task<HealthCareWCFServices.Task[]> taskStatusFilterAsync(string status);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace HealthWebUI.TaskServiceReference {
         
         public System.Threading.Tasks.Task<HealthCareWCFServices.Task[]> getTasksAsync() {
             return base.Channel.getTasksAsync();
+        }
+        
+        public void deleteTask(string taskName) {
+            base.Channel.deleteTask(taskName);
+        }
+        
+        public System.Threading.Tasks.Task deleteTaskAsync(string taskName) {
+            return base.Channel.deleteTaskAsync(taskName);
+        }
+        
+        public HealthCareWCFServices.Task[] taskStatusFilter(string status) {
+            return base.Channel.taskStatusFilter(status);
+        }
+        
+        public System.Threading.Tasks.Task<HealthCareWCFServices.Task[]> taskStatusFilterAsync(string status) {
+            return base.Channel.taskStatusFilterAsync(status);
         }
     }
 }

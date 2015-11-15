@@ -12,7 +12,7 @@ namespace HealthCareWCFServices
     public interface ISubTaskService
     {
         [OperationContract]
-        void createSubtask(int taskId, string description, string status);
+        void createSubtask(string taskName, string description, string status);
 
         [OperationContract]
         void updateSubtask(int taskId, string description, string status);
@@ -22,6 +22,12 @@ namespace HealthCareWCFServices
 
         [OperationContract]
         List<SubTask> getSubTasks();
+
+        [OperationContract]
+        void deleteSubTask(int id);
+
+        [OperationContract]
+        List<SubTask> getTaskSubTasks(string taskName);
 
     }
 

@@ -24,3 +24,27 @@ C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHeal
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.csprojResolveAssemblyReference.cache
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.dll
 C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.pdb
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.csprojResolveAssemblyReference.cache
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\csc.exe
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\System.Collections.Immutable.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\System.Reflection.Metadata.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\vbc.exe
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\VBCSCompiler.exe
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\VBCSCompiler.exe.config
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.dll.config
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.pdb
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareModel.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareWCFServices.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareModel.pdb
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareWCFServices.pdb
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.dll
+E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.pdb

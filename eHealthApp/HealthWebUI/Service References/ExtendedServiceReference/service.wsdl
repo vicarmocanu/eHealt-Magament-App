@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExtendedService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/HealthCareWCFServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExtendedService_createAlarmAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:createAlarmAttendance" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createAlarmAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createAlarmAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_deleteAlarmAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAlarmAttendance" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_deleteAlarmAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAlarmAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getAllarmAttendants_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllarmAttendants" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getAllarmAttendants_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllarmAttendantsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createAlarmCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:createAlarmCount" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createAlarmCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createAlarmCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getAlarmCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAlarmCount" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getAlarmCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAlarmCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getTaskUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTaskUsers" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getTaskUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTaskUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getUserTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserTasks" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getUserTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createAssignedTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:createAssignedTask" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createAssignedTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createAssignedTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_deleteAssignedTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAssignedTask" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_deleteAssignedTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAssignedTaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExtendedService">
+    <wsdl:operation name="createAlarmAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/createAlarmAttendance" message="tns:IExtendedService_createAlarmAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/createAlarmAttendanceResponse" message="tns:IExtendedService_createAlarmAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAlarmAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/deleteAlarmAttendance" message="tns:IExtendedService_deleteAlarmAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/deleteAlarmAttendanceResponse" message="tns:IExtendedService_deleteAlarmAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllarmAttendants">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getAllarmAttendants" message="tns:IExtendedService_getAllarmAttendants_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getAllarmAttendantsResponse" message="tns:IExtendedService_getAllarmAttendants_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createAlarmCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/createAlarmCount" message="tns:IExtendedService_createAlarmCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/createAlarmCountResponse" message="tns:IExtendedService_createAlarmCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAlarmCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCount" message="tns:IExtendedService_getAlarmCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCountResponse" message="tns:IExtendedService_getAlarmCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaskUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getTaskUsers" message="tns:IExtendedService_getTaskUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getTaskUsersResponse" message="tns:IExtendedService_getTaskUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getUserTasks" message="tns:IExtendedService_getUserTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getUserTasksResponse" message="tns:IExtendedService_getUserTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createAssignedTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/createAssignedTask" message="tns:IExtendedService_createAssignedTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/createAssignedTaskResponse" message="tns:IExtendedService_createAssignedTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAssignedTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/deleteAssignedTask" message="tns:IExtendedService_deleteAssignedTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/deleteAssignedTaskResponse" message="tns:IExtendedService_deleteAssignedTask_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExtendedService" type="tns:IExtendedService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createAlarmAttendance">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/createAlarmAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAlarmAttendance">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/deleteAlarmAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllarmAttendants">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/getAllarmAttendants" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAlarmCount">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/createAlarmCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAlarmCount">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/getAlarmCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaskUsers">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/getTaskUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserTasks">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/getUserTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAssignedTask">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/createAssignedTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAssignedTask">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/deleteAssignedTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExtendedService">
+    <wsdl:port name="BasicHttpBinding_IExtendedService" binding="tns:BasicHttpBinding_IExtendedService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/HealthCareWCFServices/ExtendedService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
