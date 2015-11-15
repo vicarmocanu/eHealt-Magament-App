@@ -21,8 +21,7 @@ namespace HealthWebUI.Login
             string givenUsername = Convert.ToString(this.usernameTxt.Text);
             string givenPassword = Convert.ToString(this.passwordTxt.Text);
 
-            string result = "";  //    userService.userLogIn(givenUsername, givenPassword);  Function userLogIn not yet developed
-
+            string result = "";  //    userService.userLogIn(givenUsername, givenPassword);  Function userLogIn to be implemented in the service. Code is good otherwise.
             switch (result)
             {
                 case "Fail":

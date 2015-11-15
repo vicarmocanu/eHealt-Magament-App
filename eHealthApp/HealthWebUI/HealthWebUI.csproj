@@ -306,6 +306,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Management\Tasks\SubTasks\" />
     <Folder Include="Subscriber\" />
   </ItemGroup>
   <ItemGroup>

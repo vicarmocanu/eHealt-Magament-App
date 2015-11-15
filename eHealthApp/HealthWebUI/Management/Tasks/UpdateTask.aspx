@@ -10,7 +10,7 @@
                 <p>
                     TaskName: 
                     <br />
-                    <asp:TextBox id="txtTaskName" runat="server" Width="250px" />
+                    <asp:Label id="boundTxtTaskName" runat="server" Width="250px" />
                     <br />
                     Status:
                     <br />

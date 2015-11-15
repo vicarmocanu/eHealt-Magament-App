@@ -27,6 +27,7 @@
                         <br />
                         
                         <asp:Button ID="updateUser" Text="Update User" runat="server" CommandName="updateUser" CommandArgument='<%# Eval("UserName") %>' />
+                        <asp:Button ID="deleteUser" Text="Delete User" runat="server" CommandName="deleteUser" CommandArgument='<%# Eval("UserName") %>' />
 
 
                     </div>

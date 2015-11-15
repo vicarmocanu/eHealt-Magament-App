@@ -9,17 +9,17 @@ namespace HealthWebUI.Management.Tasks
 {
     public partial class UpdateTask : System.Web.UI.Page
     {
-
+        private string taskName = "";
         private static TaskServiceReference.TaskServiceClient taskService = new TaskServiceReference.TaskServiceClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            taskName = Convert.ToString(Session["taskName"]);
+            boundTxtTaskName.Text = taskName;
         }
 
         protected void updateButton_Click(object sender, EventArgs e)
         {
-            string taskName = Convert.ToString(this.txtTaskName.Text);
             string status = Convert.ToString(this.txtStatus.Text);
             string description = Convert.ToString(this.txtDescription.Text);
 

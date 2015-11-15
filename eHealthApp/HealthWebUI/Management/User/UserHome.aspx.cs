@@ -31,7 +31,11 @@ namespace HealthWebUI.Management.User
                     Session["userName"] = userName;
                     Response.Redirect("~/Management/User/UpdateUser.aspx");
                     break;
-                   
+                case "deleteUser":
+                    string userName2 = Convert.ToString(e.CommandArgument);
+                    //user service delete user with function using userName2 as variable
+                    Response.Redirect(Request.RawUrl);
+                    break;                                        
                 default:
                     break;
             }
