@@ -30,5 +30,15 @@ namespace HealthCareModel.ControlHandler
         {
             taskHandler.updateTask(taskName, status, description);
         }
+
+        public static void deleteTask(string taskName)
+        {
+            taskHandler.deleteTask(taskName);
+        }
+
+        public static List<Task> taskStatusFilter(string status)
+        {
+            return taskHandler.taskStatusFilter(status);
+        }
     }
 }

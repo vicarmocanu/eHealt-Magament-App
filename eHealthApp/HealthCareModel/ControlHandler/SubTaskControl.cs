@@ -11,24 +11,34 @@ namespace HealthCareModel.Controller
     {
         private static ISubTaskHandler subtaskHandler = new SubTaskHandler();
 
-        public static void createSubtask(int taskId, string description, string status)
+        public static void createSubtask(string taskName, string description, string status)
         {
-            subtaskHandler.createSubtask(taskId, description, status);
+            subtaskHandler.createSubtask(taskName, description, status);
         }
 
-        public static void updateSubtask(int taskId, string description, string status)
+        public static void updateSubtask(int id, string description, string status)
         {
-            subtaskHandler.updateSubtask(taskId, description, status);
+            subtaskHandler.updateSubtask(id, description, status);
         }
 
-        public static SubTask getSubtask(int taskId)
+        public static SubTask getSubtask(int id)
         {
-            return subtaskHandler.getSubtask(taskId);
+            return subtaskHandler.getSubtask(id);
         }
 
         public static List<SubTask> getSubtasks()
         {
             return subtaskHandler.getSubtasks();
+        }
+
+        public static void deleteSubTask(int id)
+        {
+            subtaskHandler.deleteSubTask(id);
+        }
+
+        public static List<SubTask> getTaskSubTasks(string taskName)
+        {
+            return subtaskHandler.getTaskSubTasks(taskName);
         }
     }
 }

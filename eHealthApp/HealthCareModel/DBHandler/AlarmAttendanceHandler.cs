@@ -10,17 +10,23 @@ namespace HealthCareModel.DBHandler
     class AlarmAttendanceHandler : IAlarmAttendanceHandler
     {
         //create alarm attendance
-        public void createAlarmAttendance(int alarmId, int userId)
+        public void createAlarmAttendance(string alarmName, string userName)
         {
             using (var db = new HealthModelsDataContext())
             {
-                var alarmAttendace = new AlarmAttendance();
+                Alarm alarm = db.Alarms.SingleOrDefault(targetAlarm => targetAlarm.name.Equals(alarmName));
+                User user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(userName));
 
-                alarmAttendace.userId = userId;
-                alarmAttendace.alarmId = alarmId;
+                if (alarm != null && user != null)
+                {
+                    var alarmAttendace = new AlarmAttendance();
 
-                db.AlarmAttendances.InsertOnSubmit(alarmAttendace);
-                db.SubmitChanges();
+                    alarmAttendace.userId = alarm.id;
+                    alarmAttendace.alarmId = user.id;
+
+                    db.AlarmAttendances.InsertOnSubmit(alarmAttendace);
+                    db.SubmitChanges();
+                }
             }
         }
 

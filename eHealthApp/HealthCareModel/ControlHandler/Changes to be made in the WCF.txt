@@ -1,0 +1,17 @@
+﻿-UserControl
+public static void deleteUser(string username)
+
+-TaskControl
+public static void deleteTask(string taskName)
+public static List<Task> taskStatusFilter(string status)
+
+-AlarmControl *
+
+-SubTaskControl
+public static void createSubtask(string taskName, string description, string status)
+public static void deleteSubTask(int id)
+public static List<SubTask> getTaskSubTasks(string taskName)
+
+-ExtendedControl 
+all
+needs DataContract in the service interfaces: AlarmCount, AlarmAttendance, TaskAssignment

@@ -10,7 +10,7 @@ namespace HealthCareModel.DBHandler
     interface IAlarmCountHandler
     {
         //create
-        void createAlarmCount(int alarmId, int count);
+        void createAlarmCount(string alarmName);
 
         //delete
         void deleteAlarmCount(int alarmId);

@@ -9,17 +9,25 @@ namespace HealthCareModel.DBHandler
     class AssignedTaskHandler:IAssignedTaskHandler
     {
         //create assigned tasks
-        public void createAssignedTask(int taskId, int userId)
+        public void createAssignedTask(string taskName, string username)
         {
             using (var db = new HealthModelsDataContext())
             {
-                var assignedTask = new AssignedTask();
+                Task task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                User user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username));
 
-                assignedTask.taskId = taskId;
-                assignedTask.userId = userId;
+                if(task!=null && user!=null)
+                {
+                    var assignedTask = new AssignedTask();
 
-                db.AssignedTasks.InsertOnSubmit(assignedTask);
-                db.SubmitChanges();
+                    assignedTask.taskId = task.id;
+                    assignedTask.userId = user.id;
+
+                    db.AssignedTasks.InsertOnSubmit(assignedTask);
+                    db.SubmitChanges();
+                }
+
+                
             }
         }
 

@@ -15,7 +15,7 @@ namespace HealthCareModel.DBHandler
         List<Task> getUserTasks(string username);
 
         //create assigned tasks
-        void createAssignedTask(int taskId, int userId);
+        void createAssignedTask(string taskName, string username);
 
         //delete assigned tasks
         void deleteAssignedTask(int taskId, int userId);

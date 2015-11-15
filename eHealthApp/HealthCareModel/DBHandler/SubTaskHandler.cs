@@ -9,18 +9,22 @@ namespace HealthCareModel.DBHandler
     class SubTaskHandler : ISubTaskHandler
     {
         //create SubTask
-        public void createSubtask(int taskId, string description, string status)
+        public void createSubtask(string taskName, string description, string status)
         {
             using (var db = new HealthModelsDataContext())
             {
-                var subtask = new SubTask();
+                Task task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                if (task != null)
+                {
+                    var subtask = new SubTask();
 
-                subtask.taskId = taskId;
-                subtask.description = description;
-                subtask.status = status;
+                    subtask.taskId = task.id;
+                    subtask.description = description;
+                    subtask.status = status;
 
-                db.SubTasks.InsertOnSubmit(subtask);
-                db.SubmitChanges();
+                    db.SubTasks.InsertOnSubmit(subtask);
+                    db.SubmitChanges();
+                }                
             }
         }
 
@@ -40,13 +44,13 @@ namespace HealthCareModel.DBHandler
         }
          
         //get SubTask
-        public SubTask getSubtask(int taskId)
+        public SubTask getSubtask(int id)
         {
             var subtask = new SubTask();
 
             using (var db = new HealthModelsDataContext())
             {
-                var query = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(taskId));
+                var query = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(id));
                 subtask = query;
             }
 
@@ -67,17 +71,17 @@ namespace HealthCareModel.DBHandler
         }
 
         //update SubTask
-        public void updateSubtask(int taskId, string description, string status)
+        public void updateSubtask(int id, string description, string status)
         {
             var subtask = new SubTask();
 
             using (var db = new HealthModelsDataContext())
             {
-                subtask = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(taskId));
+                subtask = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(id));
 
                 if (subtask != null)
                 {
-                    subtask.taskId = taskId;
+                    subtask.taskId = id;
                     subtask.description = description;
                     subtask.status = status;
 

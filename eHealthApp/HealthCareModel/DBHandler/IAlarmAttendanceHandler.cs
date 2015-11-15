@@ -10,7 +10,7 @@ namespace HealthCareModel.DBHandler
     interface IAlarmAttendanceHandler
     {
         //create alarm attendance
-        void createAlarmAttendance(int alarmId, int userId);
+        void createAlarmAttendance(string alarmName, string userName);
 
         //delete alarm attendance
         void deleteAlarmAttendance(int alarmId, int userId);

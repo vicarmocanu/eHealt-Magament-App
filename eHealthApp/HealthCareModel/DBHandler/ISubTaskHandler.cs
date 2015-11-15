@@ -9,13 +9,13 @@ namespace HealthCareModel.DBHandler
     interface ISubTaskHandler
     {
         //create subtask
-        void createSubtask(int taskId, string description, string status);
+        void createSubtask(string taskName, string description, string status);
 
         //update subtask
-        void updateSubtask(int taskId, string description, string status);
+        void updateSubtask(int id, string description, string status);
 
         //get subtask
-        SubTask getSubtask(int taskId);
+        SubTask getSubtask(int id);
 
         //get all subtasks
         List<SubTask> getSubtasks();
