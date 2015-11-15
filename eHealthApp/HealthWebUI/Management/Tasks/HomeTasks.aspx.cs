@@ -24,17 +24,17 @@ namespace HealthWebUI.Management.Tasks
         {
             switch (e.CommandName.ToString())
             {
-                case "taskUpade":
-                    
-                        int taskId = 0;
-
-                        taskId = Convert.ToInt32(e.CommandArgument);
-                        Session["taskId"] = taskId;
-
-                        Response.Redirect("~/Management/User/UpdateTask.aspx");
-
-                        break;
-
+                case "updateTask":
+                    string taskName = "";
+                    taskName = Convert.ToString(e.CommandArgument);
+                    Session["taskName"] = taskName;
+                    Response.Redirect("~/Management/User/UpdateTask.aspx");
+                    break;
+                case "deleteTask":
+                    string taskName2 = Convert.ToString(e.CommandArgument);
+                    //task service delete function with taskName 2 used as variable
+                    Response.Redirect(Request.RawUrl);
+                    break;
                 default:
                     break;        
             }

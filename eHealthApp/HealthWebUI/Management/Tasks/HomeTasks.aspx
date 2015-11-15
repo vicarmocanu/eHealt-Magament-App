@@ -21,7 +21,8 @@
                         <b>Description</b>
                         <asp:Label ID="taskDescription" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
                         <br />
-                        <asp:Button ID="updateTask" Text="Update Task" runat="server" CommandName="updateTask" CommandArgument='<%# Eval("Id") %>' />
+                        <asp:Button ID="updateTask" Text="Update Task" runat="server" CommandName="updateTask" CommandArgument='<%# Eval("TaskName") %>' />
+                        <asp:Button ID="deleteTask" Text="Delete Task" runat="server" CommandName="deleteTask" CommandArgument='<%# Eval("TaskName") %>' />
 
                     </div>
 

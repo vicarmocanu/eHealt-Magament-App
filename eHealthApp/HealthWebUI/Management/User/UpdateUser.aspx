@@ -24,7 +24,7 @@
 
                     UserName
                     <br />
-                    <asp:TextBox ID="txtUserName" runat="server" Width="250px" />
+                    <asp:Label ID="boundTxtUserName" runat="server" Width="250px" />
               
                     <br />
 
