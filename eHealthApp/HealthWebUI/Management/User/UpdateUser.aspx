@@ -42,8 +42,6 @@
 
                     <asp:Button ID="updateBtn" runat="server" Text="Update Session" ValidationGroup="save" OnClick="updateBtn_Click" />
                     &nbsp;
-                    <asp:Button ID="cancelUser" runat="server" Text="Cancel session" OnClick="cancelUser_Click" />
-                    &nbsp;
                     <asp:Button ID="cancelAll" runat="server" Text="Cancel/Return" OnClick="cancelAll_Click" />
 
 

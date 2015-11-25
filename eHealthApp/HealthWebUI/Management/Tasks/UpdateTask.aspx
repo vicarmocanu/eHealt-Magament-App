@@ -22,8 +22,6 @@
                     <br />
                     <asp:Button ID="updateBtn" runat="server" Text="Update Task" ValidationGroup="save" OnClick="updateBtn_Click" />
                     &nbsp;
-                    <asp:Button ID="cancelTask" runat="server" Text="Cancel task" OnClick="cancelTask_Click" />
-                    &nbsp;
                     <asp:Button ID="cancelAll" runat="server" Text="Cancel/Return" OnClick="cancelAll_Click" />
                 </p>
             </asp:Panel>

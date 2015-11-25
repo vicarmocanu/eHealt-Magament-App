@@ -78,6 +78,7 @@
     <Content Include="Images\nav.jpg" />
     <Content Include="Login\Error.aspx" />
     <Content Include="Login\LogIn.aspx" />
+    <Content Include="Management\ManagementHome.aspx" />
     <Content Include="Management\Tasks\HomeTasks.aspx" />
     <Content Include="Management\Tasks\InsertTask.aspx" />
     <Content Include="Management\Tasks\UpdateTask.aspx" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="Management\HomeManagement.Master.designer.cs">
       <DependentUpon>HomeManagement.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ManagementHome.aspx.cs">
+      <DependentUpon>ManagementHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\ManagementHome.aspx.designer.cs">
+      <DependentUpon>ManagementHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\Tasks\HomeTasks.aspx.cs">
       <DependentUpon>HomeTasks.aspx</DependentUpon>

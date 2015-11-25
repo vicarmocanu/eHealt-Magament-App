@@ -28,11 +28,11 @@ namespace HealthWebUI.Management.Tasks
                     string taskName = "";
                     taskName = Convert.ToString(e.CommandArgument);
                     Session["taskName"] = taskName;
-                    Response.Redirect("~/Management/User/UpdateTask.aspx");
+                    Response.Redirect("/Management/Tasks/UpdateTask.aspx");
                     break;
                 case "deleteTask":
                     string taskName2 = Convert.ToString(e.CommandArgument);
-                    //task service delete function with taskName 2 used as variable
+                    taskService.deleteTask(taskName2);
                     Response.Redirect(Request.RawUrl);
                     break;
                 default:

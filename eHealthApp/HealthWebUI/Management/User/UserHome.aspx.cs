@@ -29,11 +29,11 @@ namespace HealthWebUI.Management.User
                case "updateUser":
                     string userName = Convert.ToString(e.CommandArgument);
                     Session["userName"] = userName;
-                    Response.Redirect("~/Management/User/UpdateUser.aspx");
+                    Response.Redirect("/Management/User/UpdateUser.aspx");
                     break;
                 case "deleteUser":
                     string userName2 = Convert.ToString(e.CommandArgument);
-                    //user service delete user with function using userName2 as variable
+                    userService.deleteUser(userName2);
                     Response.Redirect(Request.RawUrl);
                     break;                                        
                 default:
@@ -43,7 +43,7 @@ namespace HealthWebUI.Management.User
 
         protected void createButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Management/User/CreateUser.aspx");
+            Response.Redirect("/Management/User/InsertUser.aspx");
         }
 
         public void RepeaterDataBinding()

@@ -18,7 +18,7 @@ namespace HealthWebUI.Management.Tasks
             boundTxtTaskName.Text = taskName;
         }
 
-        protected void updateButton_Click(object sender, EventArgs e)
+        protected void updateBtn_Click(object sender, EventArgs e)
         {
             string status = Convert.ToString(this.txtStatus.Text);
             string description = Convert.ToString(this.txtDescription.Text);
