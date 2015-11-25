@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HealthDB" Class="HealthModelsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MDU\SQLEXPRESS;Initial Catalog=HealthDB;Integrated Security=True" SettingsObjectName="eHealthApp.Properties.Settings" SettingsPropertyName="HealthDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=THERAK\SQLEXPRESS;Initial Catalog=HealthDB;Integrated Security=True" SettingsObjectName="HealthCareModel.Properties.Settings" SettingsPropertyName="HealthDBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AlarmAttendance" Member="AlarmAttendances">
     <Type Name="AlarmAttendance">
       <Column Name="alarmId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="User_AlarmAttendance" Member="User" ThisKey="userId" OtherKey="id" Type="User" IsForeignKey="true" />
-      <Association Name="Alarm_AlarmAttendance" Member="Alarm" ThisKey="alarmId" OtherKey="id" Type="Alarm" IsForeignKey="true" />
+      <Association Name="User_AlarmAttendance" Member="User" ThisKey="userId" OtherKey="id" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Alarm_AlarmAttendance" Member="Alarm" ThisKey="alarmId" OtherKey="id" Type="Alarm" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Users" Member="Users">
@@ -24,7 +24,7 @@
     <Type Name="AlarmCount">
       <Column Name="alarmId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Alarm_AlarmCount" Member="Alarm" ThisKey="alarmId" OtherKey="id" Type="Alarm" IsForeignKey="true" />
+      <Association Name="Alarm_AlarmCount" Member="Alarm" ThisKey="alarmId" OtherKey="id" Type="Alarm" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Alarms" Member="Alarms">
@@ -43,8 +43,8 @@
     <Type Name="AssignedTask">
       <Column Name="taskId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="User_AssignedTask" Member="User" ThisKey="userId" OtherKey="id" Type="User" IsForeignKey="true" />
-      <Association Name="Task_AssignedTask" Member="Task" ThisKey="taskId" OtherKey="id" Type="Task" IsForeignKey="true" />
+      <Association Name="User_AssignedTask" Member="User" ThisKey="userId" OtherKey="id" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Task_AssignedTask" Member="Task" ThisKey="taskId" OtherKey="id" Type="Task" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.SubTasks" Member="SubTasks">
@@ -53,7 +53,7 @@
       <Column Name="taskId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Task_SubTask" Member="Task" ThisKey="taskId" OtherKey="id" Type="Task" IsForeignKey="true" />
+      <Association Name="Task_SubTask" Member="Task" ThisKey="taskId" OtherKey="id" Type="Task" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Tasks" Member="Tasks">

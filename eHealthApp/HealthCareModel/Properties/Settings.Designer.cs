@@ -32,5 +32,15 @@ namespace HealthCareModel.Properties {
                 return ((string)(this["HealthDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THERAK\\SQLEXPRESS;Initial Catalog=HealthDB;Integrated Security=True")]
+        public string HealthDBConnectionString1 {
+            get {
+                return ((string)(this["HealthDBConnectionString1"]));
+            }
+        }
     }
 }

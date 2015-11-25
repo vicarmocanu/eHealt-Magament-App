@@ -11,18 +11,18 @@
 
 namespace HealthCareModel.Object_Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Data.Linq;
-    using System.Data.Linq.Mapping;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Reflection;
-
-
-    [global::System.Data.Linq.Mapping.DatabaseAttribute(Name="HealthDB")]
+	using System.Data.Linq;
+	using System.Data.Linq.Mapping;
+	using System.Data;
+	using System.Collections.Generic;
+	using System.Reflection;
+	using System.Linq;
+	using System.Linq.Expressions;
+	using System.ComponentModel;
+	using System;
+	
+	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="HealthDB")]
 	public partial class HealthModelsDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -54,7 +54,7 @@ namespace HealthCareModel.Object_Models
     #endregion
 		
 		public HealthModelsDataContext() : 
-				base(global::HealthCareModel.Properties.Settings.Default.HealthDBConnectionString, mappingSource)
+				base(global::HealthCareModel.Properties.Settings.Default.HealthDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -219,7 +219,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_AlarmAttendance", Storage="_User", ThisKey="userId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_AlarmAttendance", Storage="_User", ThisKey="userId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public User User
 		{
 			get
@@ -253,7 +253,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_AlarmAttendance", Storage="_Alarm", ThisKey="alarmId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_AlarmAttendance", Storage="_Alarm", ThisKey="alarmId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public Alarm Alarm
 		{
 			get
@@ -618,7 +618,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_AlarmCount", Storage="_Alarm", ThisKey="alarmId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_AlarmCount", Storage="_Alarm", ThisKey="alarmId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public Alarm Alarm
 		{
 			get
@@ -994,7 +994,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_AssignedTask", Storage="_User", ThisKey="userId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="User_AssignedTask", Storage="_User", ThisKey="userId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public User User
 		{
 			get
@@ -1028,7 +1028,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Task_AssignedTask", Storage="_Task", ThisKey="taskId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Task_AssignedTask", Storage="_Task", ThisKey="taskId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public Task Task
 		{
 			get
@@ -1203,7 +1203,7 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Task_SubTask", Storage="_Task", ThisKey="taskId", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Task_SubTask", Storage="_Task", ThisKey="taskId", OtherKey="id", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public Task Task
 		{
 			get
