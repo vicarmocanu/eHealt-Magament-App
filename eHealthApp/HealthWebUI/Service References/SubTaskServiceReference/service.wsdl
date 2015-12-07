@@ -19,11 +19,11 @@
   <wsdl:message name="ISubTaskService_updateSubtask_OutputMessage">
     <wsdl:part name="parameters" element="tns:updateSubtaskResponse" />
   </wsdl:message>
-  <wsdl:message name="ISubTaskService_getTask_InputMessage">
-    <wsdl:part name="parameters" element="tns:getTask" />
+  <wsdl:message name="ISubTaskService_getSubTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSubTask" />
   </wsdl:message>
-  <wsdl:message name="ISubTaskService_getTask_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getTaskResponse" />
+  <wsdl:message name="ISubTaskService_getSubTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSubTaskResponse" />
   </wsdl:message>
   <wsdl:message name="ISubTaskService_getSubTasks_InputMessage">
     <wsdl:part name="parameters" element="tns:getSubTasks" />
@@ -52,9 +52,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/updateSubtask" message="tns:ISubTaskService_updateSubtask_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/updateSubtaskResponse" message="tns:ISubTaskService_updateSubtask_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getTask">
-      <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/getTask" message="tns:ISubTaskService_getTask_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/getTaskResponse" message="tns:ISubTaskService_getTask_OutputMessage" />
+    <wsdl:operation name="getSubTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/getSubTask" message="tns:ISubTaskService_getSubTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISubTaskService/getSubTaskResponse" message="tns:ISubTaskService_getSubTask_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getSubTasks">
       <wsdl:input wsaw:Action="http://tempuri.org/ISubTaskService/getSubTasks" message="tns:ISubTaskService_getSubTasks_InputMessage" />
@@ -89,8 +89,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getTask">
-      <soap:operation soapAction="http://tempuri.org/ISubTaskService/getTask" style="document" />
+    <wsdl:operation name="getSubTask">
+      <soap:operation soapAction="http://tempuri.org/ISubTaskService/getSubTask" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

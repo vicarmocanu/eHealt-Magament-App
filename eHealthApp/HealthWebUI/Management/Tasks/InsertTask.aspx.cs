@@ -24,7 +24,12 @@ namespace HealthWebUI.Management.Tasks
 
             taskService.createTask(taskName, status, description);
 
-            Response.Redirect("~/Management/Tasks/HomeTasks.aspx");
+            Response.Redirect("/Management/Tasks/HomeTasks.aspx");
+        }
+
+        protected void btnCancelAll_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Management/Tasks/HomeTasks.aspx");
         }
     }
 }

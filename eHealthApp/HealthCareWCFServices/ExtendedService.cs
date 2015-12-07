@@ -39,13 +39,13 @@ namespace HealthCareWCFServices
             }
         }
 
-        public void deleteAlarmAttendance(int alarmId, int userId)
+        public void deleteAlarmAttendance(string alarmName, string userName)
         {
             if (System.Threading.Monitor.TryEnter(obj2, 45000))
             {
                 try
                 {
-                    ExtendedControl.deleteAlarmAttendance(alarmId, userId);
+                    ExtendedControl.deleteAlarmAttendance(alarmName, userName);
                 }
                 finally
                 {
@@ -54,7 +54,7 @@ namespace HealthCareWCFServices
             }
         }
 
-        public List<User> getAllarmAttendants(int alarmId)
+        public List<User> getAllarmAttendants(string alarmName)
         {
 
             List<User> alarmAttendants = new List<User>();
@@ -64,7 +64,7 @@ namespace HealthCareWCFServices
                 try
                 {
 
-                    List<HealthCareModel.Object_Models.User> returnList = ExtendedControl.getAllarmAttendants(alarmId);
+                    List<HealthCareModel.Object_Models.User> returnList = ExtendedControl.getAllarmAttendants(alarmName);
 
                     if (returnList.Count != 0)
                     {
@@ -75,6 +75,7 @@ namespace HealthCareWCFServices
                             srvUser.FirstName = attendantHome.firstName;
                             srvUser.LastName = attendantHome.lastName;
                             srvUser.UserName = attendantHome.userName;
+                            srvUser.Role = attendantHome.role;
 
                             alarmAttendants.Add(srvUser);
                         }
@@ -152,6 +153,8 @@ namespace HealthCareWCFServices
 
                             srvUser.FirstName = userHost.firstName;
                             srvUser.LastName = userHost.lastName;
+                            srvUser.UserName = userHost.userName;
+                            srvUser.Role = userHost.role;
 
                             srvTaskUsers.Add(srvUser);
                         }
@@ -221,13 +224,13 @@ namespace HealthCareWCFServices
             }
         }
 
-        public void deleteAssignedTask(int taskId, int userId)
+        public void deleteAssignedTask(string taskName, string username)
         {
             if (System.Threading.Monitor.TryEnter(obj11, 45000))
             {
                 try
                 {
-                    ExtendedControl.deleteAssignedTask(taskId, userId);
+                    ExtendedControl.deleteAssignedTask(taskName, username);
                 }
                 finally
                 {

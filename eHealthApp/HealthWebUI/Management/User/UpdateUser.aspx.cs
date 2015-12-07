@@ -12,13 +12,11 @@ namespace HealthWebUI.Management.User
     {
         private string userName = "";
         private static UserServiceReference.UserServiceClient userService = new UserServiceReference.UserServiceClient();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             userName = Convert.ToString(Session["userName"]);
             boundTxtUserName.Text = userName;
         }
-
         protected void updateBtn_Click(object sender, EventArgs e)
         {
             string fName = Convert.ToString(this.txtFName.Text);
@@ -29,12 +27,11 @@ namespace HealthWebUI.Management.User
 
             userService.updateUser(fName, lName, userName, password, role);
 
-            Response.Redirect("~/Management/User/UserHome.aspx");
+            Response.Redirect("/Management/User/UserHome.aspx");
         }
-
         protected void cancelAll_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Management/User/UserHome.aspx");
+            Response.Redirect("/Management/User/UserHome.aspx");
         }
     }
 }

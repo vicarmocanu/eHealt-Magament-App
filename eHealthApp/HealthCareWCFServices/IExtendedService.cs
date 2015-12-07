@@ -15,10 +15,10 @@ namespace HealthCareWCFServices
         void createAlarmAttendance(string alarmName, string userName);
 
         [OperationContract]
-        void deleteAlarmAttendance(int alarmId, int userId);
+        void deleteAlarmAttendance(string alarmName, string userName);
 
         [OperationContract]
-        List<User> getAllarmAttendants(int alarmId);
+        List<User> getAllarmAttendants(string alarmName);
 
         [OperationContract]
         void createAlarmCount(string alarmName);
@@ -36,7 +36,7 @@ namespace HealthCareWCFServices
         void createAssignedTask(string taskName, string username);
 
         [OperationContract]
-        void deleteAssignedTask(int taskId, int userId);
+        void deleteAssignedTask(string taskName, string username);
 
 
 

@@ -13,15 +13,6 @@ namespace HealthWebUI.Management.Tasks {
     public partial class UpdateTask {
         
         /// <summary>
-        /// UpdatePanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel UpdatePanel;
-        
-        /// <summary>
         /// boundTxtTaskName control.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace HealthWebUI.Management.Tasks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label boundTxtTaskName;
+        
+        /// <summary>
+        /// UpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel UpdatePanel;
         
         /// <summary>
         /// txtStatus control.

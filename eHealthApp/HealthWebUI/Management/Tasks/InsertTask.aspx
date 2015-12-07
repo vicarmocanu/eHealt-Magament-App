@@ -2,11 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="row">
         
-        <div class="col-md-7">
-            
-            <asp:Panel runat="server" ID="AddTaskPanel" DefaultButton="btnAddTask" Font-Size="Medium" >
+        <div class="col-md-7">            
+            <asp:Panel runat="server" ID="AddTaskPanel" DefaultButton="btnAddTask" Font-Size="Medium" Font-Name="Arial">
                 <b>Task Name:</b>
                 <asp:TextBox runat="server" ID="txtTaskName"></asp:TextBox>
                 <br />
@@ -17,7 +17,11 @@
                 <asp:TextBox runat="server" ID="txtDescription"></asp:TextBox>
                 <br />
                 <asp:Button runat="server" ID="btnAddTask" Text="Create" OnClick="btnAddTask_OnClick" ValidationGroup="save" />
+                &nbsp;
+                <asp:Button runat="server" ID="btnCancelAll" Text="Cancel" OnClick="btnCancelAll_Click" />
             </asp:Panel>
         </div>
+
     </div> 
+
 </asp:Content>

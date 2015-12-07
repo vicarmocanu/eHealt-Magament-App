@@ -15,10 +15,10 @@ namespace HealthCareWCFServices
         void createSubtask(string taskName, string description, string status);
 
         [OperationContract]
-        void updateSubtask(int taskId, string description, string status);
+        void updateSubtask(int id, string description, string status);
 
         [OperationContract]
-        SubTask getTask(int taskId);
+        SubTask getSubTask(int id);
 
         [OperationContract]
         List<SubTask> getSubTasks();
@@ -34,6 +34,7 @@ namespace HealthCareWCFServices
     [DataContract]
     public class SubTask
     {
+        private int id;
         private int taskId;
         private string status;
         private string description;
@@ -77,6 +78,20 @@ namespace HealthCareWCFServices
             set
             {
                 description = value;
+            }
+        }
+
+        [DataMemberAttribute]
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
     }

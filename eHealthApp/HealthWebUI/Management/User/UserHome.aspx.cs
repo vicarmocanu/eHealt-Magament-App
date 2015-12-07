@@ -12,8 +12,6 @@ namespace HealthWebUI.Management.User
     public partial class UserHome : System.Web.UI.Page
     {
         private UserServiceReference.UserServiceClient userService = new UserServiceReference.UserServiceClient();
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,7 +19,6 @@ namespace HealthWebUI.Management.User
                 RepeaterDataBinding();
             }
         }
-
         protected void UserRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             switch (e.CommandName.ToString())
@@ -39,13 +36,11 @@ namespace HealthWebUI.Management.User
                 default:
                     break;
             }
-        } 
-
+        }
         protected void createButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Management/User/InsertUser.aspx");
         }
-
         public void RepeaterDataBinding()
         {
             try

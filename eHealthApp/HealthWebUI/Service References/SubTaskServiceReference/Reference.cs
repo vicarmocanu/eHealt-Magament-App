@@ -22,16 +22,16 @@ namespace HealthWebUI.SubTaskServiceReference {
         System.Threading.Tasks.Task createSubtaskAsync(string taskName, string description, string status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/updateSubtask", ReplyAction="http://tempuri.org/ISubTaskService/updateSubtaskResponse")]
-        void updateSubtask(int taskId, string description, string status);
+        void updateSubtask(int id, string description, string status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/updateSubtask", ReplyAction="http://tempuri.org/ISubTaskService/updateSubtaskResponse")]
-        System.Threading.Tasks.Task updateSubtaskAsync(int taskId, string description, string status);
+        System.Threading.Tasks.Task updateSubtaskAsync(int id, string description, string status);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getTask", ReplyAction="http://tempuri.org/ISubTaskService/getTaskResponse")]
-        HealthCareWCFServices.SubTask getTask(int taskId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getSubTask", ReplyAction="http://tempuri.org/ISubTaskService/getSubTaskResponse")]
+        HealthCareWCFServices.SubTask getSubTask(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getTask", ReplyAction="http://tempuri.org/ISubTaskService/getTaskResponse")]
-        System.Threading.Tasks.Task<HealthCareWCFServices.SubTask> getTaskAsync(int taskId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getSubTask", ReplyAction="http://tempuri.org/ISubTaskService/getSubTaskResponse")]
+        System.Threading.Tasks.Task<HealthCareWCFServices.SubTask> getSubTaskAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISubTaskService/getSubTasks", ReplyAction="http://tempuri.org/ISubTaskService/getSubTasksResponse")]
         HealthCareWCFServices.SubTask[] getSubTasks();
@@ -87,20 +87,20 @@ namespace HealthWebUI.SubTaskServiceReference {
             return base.Channel.createSubtaskAsync(taskName, description, status);
         }
         
-        public void updateSubtask(int taskId, string description, string status) {
-            base.Channel.updateSubtask(taskId, description, status);
+        public void updateSubtask(int id, string description, string status) {
+            base.Channel.updateSubtask(id, description, status);
         }
         
-        public System.Threading.Tasks.Task updateSubtaskAsync(int taskId, string description, string status) {
-            return base.Channel.updateSubtaskAsync(taskId, description, status);
+        public System.Threading.Tasks.Task updateSubtaskAsync(int id, string description, string status) {
+            return base.Channel.updateSubtaskAsync(id, description, status);
         }
         
-        public HealthCareWCFServices.SubTask getTask(int taskId) {
-            return base.Channel.getTask(taskId);
+        public HealthCareWCFServices.SubTask getSubTask(int id) {
+            return base.Channel.getSubTask(id);
         }
         
-        public System.Threading.Tasks.Task<HealthCareWCFServices.SubTask> getTaskAsync(int taskId) {
-            return base.Channel.getTaskAsync(taskId);
+        public System.Threading.Tasks.Task<HealthCareWCFServices.SubTask> getSubTaskAsync(int id) {
+            return base.Channel.getSubTaskAsync(id);
         }
         
         public HealthCareWCFServices.SubTask[] getSubTasks() {

@@ -2,13 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="row">
 
         <div class="col-md-7">
             <asp:Repeater ID="UserRepeater" runat="server" OnItemCommand="UserRepeater_ItemCommand" >
-
                 <ItemTemplate>
-
                     <div>
                         <b>First name:</b>
                         <asp:Label ID="fNameLabel" runat="server" Text='<%# Eval("FirstName") %>'></asp:Label>
@@ -24,27 +23,25 @@
                         <br />
                         <b>Role:</b>
                         <asp:Label ID="roleLabel" runat="server" Text='<%# Eval("Role") %>'></asp:Label>
-                        <br />
-                        
+                        <br />                        
                         <asp:Button ID="updateUser" Text="Update User" runat="server" CommandName="updateUser" CommandArgument='<%# Eval("UserName") %>' />
+                        &nbsp;
                         <asp:Button ID="deleteUser" Text="Delete User" runat="server" CommandName="deleteUser" CommandArgument='<%# Eval("UserName") %>' />
-
-
                     </div>
-
                 </ItemTemplate>
-
             </asp:Repeater>
         </div>
 
     </div>
 
     <br />
+
     <div class ="row">
+
         <div class="col-md-2">
-
             <asp:Button ID="createButton" Text="Add new user" runat="server" OnClick="createButton_Click" />
-
         </div>
+
     </div>
+
 </asp:Content>

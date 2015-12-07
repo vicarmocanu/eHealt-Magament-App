@@ -11,12 +11,10 @@ namespace HealthWebUI.Management.User
     public partial class InsertUser : System.Web.UI.Page
     {
         private static UserServiceReference.IUserService userService = new UserServiceClient();
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnAddUser_OnClick(object sender, EventArgs e)
         {
             string fName = Convert.ToString(txtFirstName.Text);
@@ -26,7 +24,11 @@ namespace HealthWebUI.Management.User
             string role = Convert.ToString(txtType.Text);
 
             userService.createUser(fName, lName, username, password, role);
-            Response.Redirect("~/Management/User/UserHome.aspx");
+            Response.Redirect("/Management/User/UserHome.aspx");
+        }
+        protected void btnCancelAll_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Management/User/UserHome.aspx");
         }
     }
 }

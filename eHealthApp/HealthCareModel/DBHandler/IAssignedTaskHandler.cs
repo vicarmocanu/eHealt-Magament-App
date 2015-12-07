@@ -18,6 +18,6 @@ namespace HealthCareModel.DBHandler
         void createAssignedTask(string taskName, string username);
 
         //delete assigned tasks
-        void deleteAssignedTask(int taskId, int userId);
+        void deleteAssignedTask(string taskName, string username);
     }
 }

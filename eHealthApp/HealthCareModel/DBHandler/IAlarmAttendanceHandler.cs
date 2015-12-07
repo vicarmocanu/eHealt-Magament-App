@@ -13,9 +13,9 @@ namespace HealthCareModel.DBHandler
         void createAlarmAttendance(string alarmName, string userName);
 
         //delete alarm attendance
-        void deleteAlarmAttendance(int alarmId, int userId);
+        void deleteAlarmAttendance(string alarmName, string userName);
 
         //get the attendants of an alarm
-        List<User> getAllarmAttendants(int alarmId);
+        List<User> getAllarmAttendants(string alarmName);
     }
 }

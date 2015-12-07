@@ -2,16 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="row">
+
+    <div class="row">
 
         <div class="col-md-7">
+            <h1>
+                Task name:
+                <asp:Label runat="server" ID="boundTxtTaskName"></asp:Label>
+            </h1>
 
-            <asp:Panel ID="UpdatePanel" runat="server" Font-Size="Medium" Font-Name="Arial">
+            <br />
+
+            <asp:Panel ID="UpdatePanel" runat="server" Font-Size="Medium" Font-Name="Arial" DefaultButton="updateBtn">
                 <p>
-                    TaskName: 
-                    <br />
-                    <asp:Label id="boundTxtTaskName" runat="server" Width="250px" />
-                    <br />
                     Status:
                     <br />
                     <asp:TextBox ID="txtStatus" runat="server" Width="250px" />
@@ -26,5 +29,7 @@
                 </p>
             </asp:Panel>
         </div>
+
     </div>
+
 </asp:Content>

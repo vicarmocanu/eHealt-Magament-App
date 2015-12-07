@@ -19,14 +19,14 @@ namespace HealthCareModel.ControlHandler
             alarmAttendanceHandler.createAlarmAttendance(alarmName, userName);
         }
 
-        public static void deleteAlarmAttendance(int alarmId, int userId)
+        public static void deleteAlarmAttendance(string alarmName, string userName)
         {
-            alarmAttendanceHandler.deleteAlarmAttendance(alarmId, userId);
+            alarmAttendanceHandler.deleteAlarmAttendance(alarmName, userName);
         }
 
-        public static List<User> getAllarmAttendants(int alarmId)
+        public static List<User> getAllarmAttendants(string alarmName)
         {
-            return alarmAttendanceHandler.getAllarmAttendants(alarmId);
+            return alarmAttendanceHandler.getAllarmAttendants(alarmName);
         }
         #endregion
 
@@ -68,9 +68,9 @@ namespace HealthCareModel.ControlHandler
             assignedTaskHandler.createAssignedTask(taskName, username);
         }
 
-        public static void deleteAssignedTask(int taskId, int userId)
+        public static void deleteAssignedTask(string taskName, string username)
         {
-            assignedTaskHandler.deleteAssignedTask(taskId, userId);
+            assignedTaskHandler.deleteAssignedTask(taskName, username);
         }
         #endregion
     }

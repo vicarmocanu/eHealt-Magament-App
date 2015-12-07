@@ -78,11 +78,19 @@
     <Content Include="Images\nav.jpg" />
     <Content Include="Login\Error.aspx" />
     <Content Include="Login\LogIn.aspx" />
+    <Content Include="Management\Alarms\HomeAlarms.aspx" />
+    <Content Include="Management\Alarms\UpdateAlarm.aspx" />
     <Content Include="Management\ManagementHome.aspx" />
     <Content Include="Management\Tasks\HomeTasks.aspx" />
     <Content Include="Management\Tasks\InsertTask.aspx" />
+    <Content Include="Management\Tasks\SubTasks\HomeSubTask.aspx" />
+    <Content Include="Management\Tasks\SubTasks\InsertSubTask.aspx" />
+    <Content Include="Management\Tasks\SubTasks\UpdateSubTask.aspx" />
     <Content Include="Management\Tasks\UpdateTask.aspx" />
+    <Content Include="Management\User\AddAssignedUser.aspx" />
+    <Content Include="Management\User\AlarmAttendants.aspx" />
     <Content Include="Management\User\InsertUser.aspx" />
+    <Content Include="Management\User\AssignedUsers.aspx" />
     <Content Include="Management\User\UpdateUser.aspx" />
     <Content Include="Management\User\UserHome.aspx" />
     <Content Include="packages.config" />
@@ -98,12 +106,23 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Login\LogInMaster.Master" />
     <Content Include="Properties\DataSources\HealthCareWCFServices.ServiceAlarmCount.datasource" />
+    <Content Include="Properties\DataSources\HealthCareWCFServices.Alarm.datasource" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Service References\AlarmServiceReference\HealthCareWCFServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlarmServiceReference\service.wsdl" />
+    <None Include="Service References\AlarmServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AlarmServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ExtendedServiceReference\HealthCareWCFServices.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -178,6 +197,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\AlarmServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\AlarmServiceReference\configuration.svcinfo" />
+    <None Include="Service References\AlarmServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Styles\MainStyle.css" />
     <Content Include="Users\MyUserHome.aspx" />
     <Content Include="Users\Task\MyUserTasks.aspx" />
@@ -207,6 +232,20 @@
     <Compile Include="Login\LogInMaster.Master.designer.cs">
       <DependentUpon>LogInMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Management\Alarms\HomeAlarms.aspx.cs">
+      <DependentUpon>HomeAlarms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Alarms\HomeAlarms.aspx.designer.cs">
+      <DependentUpon>HomeAlarms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Alarms\UpdateAlarm.aspx.cs">
+      <DependentUpon>UpdateAlarm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Alarms\UpdateAlarm.aspx.designer.cs">
+      <DependentUpon>UpdateAlarm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\HomeManagement.Master.cs">
       <DependentUpon>HomeManagement.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,6 +274,27 @@
     <Compile Include="Management\Tasks\InsertTask.aspx.designer.cs">
       <DependentUpon>InsertTask.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Management\Tasks\SubTasks\HomeSubTask.aspx.cs">
+      <DependentUpon>HomeSubTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\SubTasks\HomeSubTask.aspx.designer.cs">
+      <DependentUpon>HomeSubTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\SubTasks\InsertSubTask.aspx.cs">
+      <DependentUpon>InsertSubTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\SubTasks\InsertSubTask.aspx.designer.cs">
+      <DependentUpon>InsertSubTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Tasks\SubTasks\UpdateSubTask.aspx.cs">
+      <DependentUpon>UpdateSubTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Tasks\SubTasks\UpdateSubTask.aspx.designer.cs">
+      <DependentUpon>UpdateSubTask.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\Tasks\UpdateTask.aspx.cs">
       <DependentUpon>UpdateTask.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -242,12 +302,33 @@
     <Compile Include="Management\Tasks\UpdateTask.aspx.designer.cs">
       <DependentUpon>UpdateTask.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Management\User\AddAssignedUser.aspx.cs">
+      <DependentUpon>AddAssignedUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\AddAssignedUser.aspx.designer.cs">
+      <DependentUpon>AddAssignedUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\AlarmAttendants.aspx.cs">
+      <DependentUpon>AlarmAttendants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\AlarmAttendants.aspx.designer.cs">
+      <DependentUpon>AlarmAttendants.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\User\InsertUser.aspx.cs">
       <DependentUpon>InsertUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Management\User\InsertUser.aspx.designer.cs">
       <DependentUpon>InsertUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\User\AssignedUsers.aspx.cs">
+      <DependentUpon>AssignedUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\User\AssignedUsers.aspx.designer.cs">
+      <DependentUpon>AssignedUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\User\UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>
@@ -264,6 +345,11 @@
       <DependentUpon>UserHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AlarmServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ExtendedServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -314,7 +400,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Management\Tasks\SubTasks\" />
     <Folder Include="Subscriber\" />
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +416,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AlarmServiceReference\" />
     <WCFMetadataStorage Include="Service References\ExtendedServiceReference\" />
     <WCFMetadataStorage Include="Service References\SubTaskServiceReference\" />
     <WCFMetadataStorage Include="Service References\TaskServiceReference\" />

@@ -22,16 +22,16 @@ namespace HealthWebUI.ExtendedServiceReference {
         System.Threading.Tasks.Task createAlarmAttendanceAsync(string alarmName, string userName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/deleteAlarmAttendance", ReplyAction="http://tempuri.org/IExtendedService/deleteAlarmAttendanceResponse")]
-        void deleteAlarmAttendance(int alarmId, int userId);
+        void deleteAlarmAttendance(string alarmName, string userName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/deleteAlarmAttendance", ReplyAction="http://tempuri.org/IExtendedService/deleteAlarmAttendanceResponse")]
-        System.Threading.Tasks.Task deleteAlarmAttendanceAsync(int alarmId, int userId);
+        System.Threading.Tasks.Task deleteAlarmAttendanceAsync(string alarmName, string userName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getAllarmAttendants", ReplyAction="http://tempuri.org/IExtendedService/getAllarmAttendantsResponse")]
-        HealthCareWCFServices.User[] getAllarmAttendants(int alarmId);
+        HealthCareWCFServices.User[] getAllarmAttendants(string alarmName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getAllarmAttendants", ReplyAction="http://tempuri.org/IExtendedService/getAllarmAttendantsResponse")]
-        System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getAllarmAttendantsAsync(int alarmId);
+        System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getAllarmAttendantsAsync(string alarmName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/createAlarmCount", ReplyAction="http://tempuri.org/IExtendedService/createAlarmCountResponse")]
         void createAlarmCount(string alarmName);
@@ -64,10 +64,10 @@ namespace HealthWebUI.ExtendedServiceReference {
         System.Threading.Tasks.Task createAssignedTaskAsync(string taskName, string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/deleteAssignedTask", ReplyAction="http://tempuri.org/IExtendedService/deleteAssignedTaskResponse")]
-        void deleteAssignedTask(int taskId, int userId);
+        void deleteAssignedTask(string taskName, string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/deleteAssignedTask", ReplyAction="http://tempuri.org/IExtendedService/deleteAssignedTaskResponse")]
-        System.Threading.Tasks.Task deleteAssignedTaskAsync(int taskId, int userId);
+        System.Threading.Tasks.Task deleteAssignedTaskAsync(string taskName, string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -105,20 +105,20 @@ namespace HealthWebUI.ExtendedServiceReference {
             return base.Channel.createAlarmAttendanceAsync(alarmName, userName);
         }
         
-        public void deleteAlarmAttendance(int alarmId, int userId) {
-            base.Channel.deleteAlarmAttendance(alarmId, userId);
+        public void deleteAlarmAttendance(string alarmName, string userName) {
+            base.Channel.deleteAlarmAttendance(alarmName, userName);
         }
         
-        public System.Threading.Tasks.Task deleteAlarmAttendanceAsync(int alarmId, int userId) {
-            return base.Channel.deleteAlarmAttendanceAsync(alarmId, userId);
+        public System.Threading.Tasks.Task deleteAlarmAttendanceAsync(string alarmName, string userName) {
+            return base.Channel.deleteAlarmAttendanceAsync(alarmName, userName);
         }
         
-        public HealthCareWCFServices.User[] getAllarmAttendants(int alarmId) {
-            return base.Channel.getAllarmAttendants(alarmId);
+        public HealthCareWCFServices.User[] getAllarmAttendants(string alarmName) {
+            return base.Channel.getAllarmAttendants(alarmName);
         }
         
-        public System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getAllarmAttendantsAsync(int alarmId) {
-            return base.Channel.getAllarmAttendantsAsync(alarmId);
+        public System.Threading.Tasks.Task<HealthCareWCFServices.User[]> getAllarmAttendantsAsync(string alarmName) {
+            return base.Channel.getAllarmAttendantsAsync(alarmName);
         }
         
         public void createAlarmCount(string alarmName) {
@@ -161,12 +161,12 @@ namespace HealthWebUI.ExtendedServiceReference {
             return base.Channel.createAssignedTaskAsync(taskName, username);
         }
         
-        public void deleteAssignedTask(int taskId, int userId) {
-            base.Channel.deleteAssignedTask(taskId, userId);
+        public void deleteAssignedTask(string taskName, string username) {
+            base.Channel.deleteAssignedTask(taskName, username);
         }
         
-        public System.Threading.Tasks.Task deleteAssignedTaskAsync(int taskId, int userId) {
-            return base.Channel.deleteAssignedTaskAsync(taskId, userId);
+        public System.Threading.Tasks.Task deleteAssignedTaskAsync(string taskName, string username) {
+            return base.Channel.deleteAssignedTaskAsync(taskName, username);
         }
     }
 }

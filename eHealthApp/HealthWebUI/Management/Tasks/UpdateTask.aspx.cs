@@ -25,12 +25,12 @@ namespace HealthWebUI.Management.Tasks
 
             taskService.updateTask(taskName, status, description);
 
-            Response.Redirect("~/Management/Tasks/HomeTasks.aspx");
+            Response.Redirect("/Management/Tasks/HomeTasks.aspx");
         }
-
+    
         protected void cancelAll_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Management/Tasks/HomeTasks.aspx");
+            Response.Redirect("/Management/Tasks/HomeTasks.aspx");
         }
     }
 }

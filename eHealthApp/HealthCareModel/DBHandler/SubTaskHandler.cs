@@ -50,7 +50,7 @@ namespace HealthCareModel.DBHandler
 
             using (var db = new HealthModelsDataContext())
             {
-                var query = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(id));
+                var query = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.id.Equals(id));
                 subtask = query;
             }
 
@@ -77,11 +77,10 @@ namespace HealthCareModel.DBHandler
 
             using (var db = new HealthModelsDataContext())
             {
-                subtask = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.taskId.Equals(id));
+                subtask = db.SubTasks.SingleOrDefault(targetSubtask => targetSubtask.id.Equals(id));
 
                 if (subtask != null)
                 {
-                    subtask.taskId = id;
                     subtask.description = description;
                     subtask.status = status;
 

@@ -32,17 +32,23 @@ namespace HealthCareModel.DBHandler
         }
 
         //delete assigned tasks
-        public void deleteAssignedTask(int taskId, int userId)
+        public void deleteAssignedTask(string taskName, string username)
         {
             using (var db = new HealthModelsDataContext())
             {
-                AssignedTask assignedTask = db.AssignedTasks.SingleOrDefault(assigned => assigned.taskId == taskId && assigned.userId == userId);
+                Task task = db.Tasks.SingleOrDefault(targetTask => targetTask.taskName.Equals(taskName));
+                User user = db.Users.SingleOrDefault(targetUser => targetUser.userName.Equals(username));
 
-                if (assignedTask != null) 
+                if (task != null && user != null)
                 {
-                    db.AssignedTasks.DeleteOnSubmit(assignedTask);
-                    db.SubmitChanges();
-                }
+                    AssignedTask assignedTask = db.AssignedTasks.SingleOrDefault(assigned => assigned.taskId == task.id && assigned.userId == user.id);
+
+                    if (assignedTask != null)
+                    {
+                        db.AssignedTasks.DeleteOnSubmit(assignedTask);
+                        db.SubmitChanges();
+                    }
+                }                    
             }
         }
 

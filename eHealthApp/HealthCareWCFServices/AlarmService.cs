@@ -51,7 +51,7 @@ namespace HealthCareWCFServices
                 {
                     serviceAlarm.Name = AlarmControl.getAlarm(name).name;
                     serviceAlarm.Type = AlarmControl.getAlarm(name).type;
-                    
+                    serviceAlarm.Time = AlarmControl.getAlarm(name).time;
                     serviceAlarm.Location = AlarmControl.getAlarm(name).location;
                     serviceAlarm.Status = AlarmControl.getAlarm(name).status;
                     
@@ -86,6 +86,7 @@ namespace HealthCareWCFServices
                             Alarm serviceAlarm = new Alarm();
 
                             serviceAlarm.Name = alarmHost.name;
+                            serviceAlarm.Time = alarmHost.time;
                             serviceAlarm.Type = alarmHost.type;
                             serviceAlarm.Location = alarmHost.location;
                             serviceAlarm.Status = alarmHost.status;

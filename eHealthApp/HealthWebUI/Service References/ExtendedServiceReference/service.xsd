@@ -17,8 +17,8 @@
   <xs:element name="deleteAlarmAttendance">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="alarmId" type="xs:int" />
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="alarmName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -30,7 +30,7 @@
   <xs:element name="getAllarmAttendants">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="alarmId" type="xs:int" />
+        <xs:element minOccurs="0" name="alarmName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -111,8 +111,8 @@
   <xs:element name="deleteAssignedTask">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="taskId" type="xs:int" />
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="taskName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

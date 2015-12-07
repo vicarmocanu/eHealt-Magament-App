@@ -18,7 +18,7 @@
   <xs:element name="updateSubtask">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="taskId" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
         <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -29,17 +29,17 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="getTask">
+  <xs:element name="getSubTask">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="taskId" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="getTaskResponse">
+  <xs:element name="getSubTaskResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HealthCareWCFServices" minOccurs="0" name="getTaskResult" nillable="true" type="q1:SubTask" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HealthCareWCFServices" minOccurs="0" name="getSubTaskResult" nillable="true" type="q1:SubTask" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

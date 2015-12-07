@@ -34,13 +34,13 @@ namespace HealthCareWCFServices
             }
         }
 
-        public void updateSubtask(int taskId, string description, string status)
+        public void updateSubtask(int id, string description, string status)
         {
             if (System.Threading.Monitor.TryEnter(obj2, 45000))
             {
                 try
                 {
-                    SubTaskControl.updateSubtask(taskId, description, status);
+                    SubTaskControl.updateSubtask(id, description, status);
                 }
                 finally
                 {
@@ -49,16 +49,17 @@ namespace HealthCareWCFServices
             }
         }
 
-        public SubTask getTask(int taskId)
+        public SubTask getSubTask(int id)
         {
             SubTask serviceSubTask = new SubTask();
             if (System.Threading.Monitor.TryEnter(obj3, 45000))
             {
                 try
                 {
-                    serviceSubTask.TaskId = SubTaskControl.getSubtask(taskId).taskId;
-                    serviceSubTask.Status = SubTaskControl.getSubtask(taskId).status;
-                    serviceSubTask.Description = SubTaskControl.getSubtask(taskId).description;
+                    serviceSubTask.Id = id;
+                    serviceSubTask.TaskId = SubTaskControl.getSubtask(id).taskId;
+                    serviceSubTask.Status = SubTaskControl.getSubtask(id).status;
+                    serviceSubTask.Description = SubTaskControl.getSubtask(id).description;
                 }
                 catch (NullReferenceException)
                 {
@@ -89,6 +90,7 @@ namespace HealthCareWCFServices
                         {
                             SubTask serviceSubTask = new SubTask();
 
+                            serviceSubTask.Id = subTskHost.id;
                             serviceSubTask.TaskId = subTskHost.taskId;
                             serviceSubTask.Status = subTskHost.status;
                             serviceSubTask.Description = subTskHost.description;
@@ -141,6 +143,7 @@ namespace HealthCareWCFServices
                         {
                             SubTask serviceSubTask = new SubTask();
 
+                            serviceSubTask.Id = subTskHost.id;
                             serviceSubTask.TaskId = subTskHost.taskId;
                             serviceSubTask.Status = subTskHost.status;
                             serviceSubTask.Description = subTskHost.description;
