@@ -8,3 +8,9 @@ E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Ma
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.dll.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.csprojResolveAssemblyReference.cache

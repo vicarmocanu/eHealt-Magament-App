@@ -7,11 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareModel", "HealthCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareWCFServices", "HealthCareWCFServices\HealthCareWCFServices.csproj", "{63165FFE-D687-4DD5-BA12-B401D6A5C562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmModel", "AlarmModel\AlarmModel.csproj", "{8C7EB796-3295-4AA6-B3C1-C4BC150ECD7C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmPublisher", "AlarmPublisher\AlarmPublisher.csproj", "{2CDB70DF-59C0-4E76-B254-E9A8125D12E7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthWebUI", "HealthWebUI\HealthWebUI.csproj", "{03AA5CFA-F85B-45F4-9569-35935288F5B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmPublisher", "AlarmPublisher\AlarmPublisher.csproj", "{10EC3553-818D-42CA-860E-0827AA27670C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{63165FFE-D687-4DD5-BA12-B401D6A5C562} = {63165FFE-D687-4DD5-BA12-B401D6A5C562}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmReceiver", "AlarmReceiver\AlarmReceiver.csproj", "{51E73A4F-3664-4003-B75F-A23705E74DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +30,18 @@ Global
 		{63165FFE-D687-4DD5-BA12-B401D6A5C562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63165FFE-D687-4DD5-BA12-B401D6A5C562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63165FFE-D687-4DD5-BA12-B401D6A5C562}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C7EB796-3295-4AA6-B3C1-C4BC150ECD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C7EB796-3295-4AA6-B3C1-C4BC150ECD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C7EB796-3295-4AA6-B3C1-C4BC150ECD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C7EB796-3295-4AA6-B3C1-C4BC150ECD7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CDB70DF-59C0-4E76-B254-E9A8125D12E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CDB70DF-59C0-4E76-B254-E9A8125D12E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CDB70DF-59C0-4E76-B254-E9A8125D12E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CDB70DF-59C0-4E76-B254-E9A8125D12E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03AA5CFA-F85B-45F4-9569-35935288F5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03AA5CFA-F85B-45F4-9569-35935288F5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03AA5CFA-F85B-45F4-9569-35935288F5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03AA5CFA-F85B-45F4-9569-35935288F5B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10EC3553-818D-42CA-860E-0827AA27670C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EC3553-818D-42CA-860E-0827AA27670C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EC3553-818D-42CA-860E-0827AA27670C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EC3553-818D-42CA-860E-0827AA27670C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

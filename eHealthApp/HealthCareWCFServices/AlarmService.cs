@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using HealthCareModel.ControlHandler;
-using HealthCareModel.Controller;
 
 namespace HealthCareWCFServices
 {
@@ -13,6 +12,8 @@ namespace HealthCareWCFServices
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
         private static readonly System.Object obj5 = new System.Object();
+        private static readonly System.Object obj6 = new System.Object();
+        private static readonly System.Object obj7 = new System.Object();
 
         public void createAlarm(string name, string type, string location, string status)
         {
@@ -117,11 +118,59 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj1);
+                    System.Threading.Monitor.Exit(obj5);
                 }
             }
         }
 
-      
+        public int getMaxId()
+        {
+            int maxId = 0;
+
+            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            {
+                try
+                {
+                    maxId = AlarmControl.getMaxId();
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj6);
+                }
+            }
+
+            return maxId;
+        }
+
+        public Alarm getAlarmById(int id)
+        {
+            Alarm serviceAlarm = new Alarm();
+            if (System.Threading.Monitor.TryEnter(obj7, 45000))
+            {
+                try
+                {
+                    serviceAlarm.Name = AlarmControl.getAlarmById(id).name;
+                    serviceAlarm.Type = AlarmControl.getAlarmById(id).type;
+                    serviceAlarm.Time = AlarmControl.getAlarmById(id).time;
+                    serviceAlarm.Location = AlarmControl.getAlarmById(id).location;
+                    serviceAlarm.Status = AlarmControl.getAlarmById(id).status;
+
+
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj3);
+                }
+            }
+            return serviceAlarm;
+        }
     }
 }

@@ -22,6 +22,12 @@ namespace HealthCareModel.DBHandler
         List<Alarm> getAlarms();
 
         //delete alarm
-        void deleteAlarm(string name);        
+        void deleteAlarm(string name);
+
+        //get max id
+        int getMaxId();
+
+        //get alarm by id
+        Alarm getAlarmById(int id);
     }
 }

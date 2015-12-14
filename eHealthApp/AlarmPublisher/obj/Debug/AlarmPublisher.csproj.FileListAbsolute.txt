@@ -1,14 +1,27 @@
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.dll
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmPublisher.pdb
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.dll
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Debug\AlarmModel.pdb
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\csc.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\System.Collections.Immutable.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\System.Reflection.Metadata.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\vbc.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\VBCSCompiler.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\VBCSCompiler.exe.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.dll.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.Client.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.ServiceModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.Client.xml
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareWCFServices.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareWCFServices.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareModel.pdb

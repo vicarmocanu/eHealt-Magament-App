@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlHandler\AlarmControl.cs" />
+    <Compile Include="ControlHandler\AlarmPublisherControl.cs" />
     <Compile Include="ControlHandler\ExtendedControl.cs" />
     <Compile Include="ControlHandler\SubTaskControl.cs" />
     <Compile Include="ControlHandler\TaskControl.cs" />
@@ -49,14 +50,18 @@
     <Compile Include="DBHandler\AlarmAttendanceHandler.cs" />
     <Compile Include="DBHandler\AlarmCountHandler.cs" />
     <Compile Include="DBHandler\AlarmHandler.cs" />
+    <Compile Include="DBHandler\AlarmPublisherHandler.cs" />
     <Compile Include="DBHandler\AssignedTaskHandler.cs" />
     <Compile Include="DBHandler\IAlarmAttendanceHandler.cs" />
     <Compile Include="DBHandler\IAlarmCountHandler.cs" />
     <Compile Include="DBHandler\IAlarmHandler.cs" />
+    <Compile Include="DBHandler\IAlarmPublisherHandler.cs" />
     <Compile Include="DBHandler\IAssignedTaskHandler.cs" />
+    <Compile Include="DBHandler\IPublishedAlarms.cs" />
     <Compile Include="DBHandler\ISubTaskHandler.cs" />
     <Compile Include="DBHandler\ITaskHandler.cs" />
     <Compile Include="DBHandler\IUserHandler.cs" />
+    <Compile Include="DBHandler\PublishedAlarmsHandler.cs" />
     <Compile Include="DBHandler\SubTaskHandler.cs" />
     <Compile Include="DBHandler\TaskHandler.cs" />
     <Compile Include="DBHandler\UserHandler.cs" />
@@ -102,13 +107,11 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ControlHandler\Changes to be made in the WCF.txt" />
     <Content Include="obj\Debug\HealthCareModel.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

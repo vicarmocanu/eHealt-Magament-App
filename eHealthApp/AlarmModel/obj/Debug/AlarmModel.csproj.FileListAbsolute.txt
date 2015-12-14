@@ -1,8 +1,0 @@
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.pdb
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.dll
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmModel\bin\Debug\AlarmModel.pdb
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.dll
-E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\AlarmModel\obj\Debug\AlarmModel.pdb

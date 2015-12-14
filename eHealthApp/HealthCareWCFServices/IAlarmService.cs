@@ -26,12 +26,17 @@ namespace HealthCareWCFServices
         [OperationContract]
         void deleteAlarm(string name);
 
-        
+        [OperationContract]
+        int getMaxId();
+
+        [OperationContract]
+        Alarm getAlarmById(int id);
     }
 
     [DataContract]
     public class Alarm
     {
+        private int id;
         private string name;
         private string type;
         private DateTime time;
@@ -108,6 +113,20 @@ namespace HealthCareWCFServices
             set
             {
                 time = value;
+            }
+        }
+
+        [DataMemberAttribute]
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
     }

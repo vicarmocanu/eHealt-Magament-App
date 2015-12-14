@@ -51,6 +51,12 @@ namespace HealthCareModel.Object_Models
     partial void InsertTask(Task instance);
     partial void UpdateTask(Task instance);
     partial void DeleteTask(Task instance);
+    partial void InsertAlarmPublisher(AlarmPublisher instance);
+    partial void UpdateAlarmPublisher(AlarmPublisher instance);
+    partial void DeleteAlarmPublisher(AlarmPublisher instance);
+    partial void InsertPublishedAlarm(PublishedAlarm instance);
+    partial void UpdatePublishedAlarm(PublishedAlarm instance);
+    partial void DeletePublishedAlarm(PublishedAlarm instance);
     #endregion
 		
 		public HealthModelsDataContext() : 
@@ -136,6 +142,22 @@ namespace HealthCareModel.Object_Models
 			get
 			{
 				return this.GetTable<Task>();
+			}
+		}
+		
+		public System.Data.Linq.Table<AlarmPublisher> AlarmPublishers
+		{
+			get
+			{
+				return this.GetTable<AlarmPublisher>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PublishedAlarm> PublishedAlarms
+		{
+			get
+			{
+				return this.GetTable<PublishedAlarm>();
 			}
 		}
 	}
@@ -695,6 +717,8 @@ namespace HealthCareModel.Object_Models
 		
 		private EntityRef<AlarmCount> _AlarmCount;
 		
+		private EntitySet<PublishedAlarm> _PublishedAlarms;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -717,6 +741,7 @@ namespace HealthCareModel.Object_Models
 		{
 			this._AlarmAttendances = new EntitySet<AlarmAttendance>(new Action<AlarmAttendance>(this.attach_AlarmAttendances), new Action<AlarmAttendance>(this.detach_AlarmAttendances));
 			this._AlarmCount = default(EntityRef<AlarmCount>);
+			this._PublishedAlarms = new EntitySet<PublishedAlarm>(new Action<PublishedAlarm>(this.attach_PublishedAlarms), new Action<PublishedAlarm>(this.detach_PublishedAlarms));
 			OnCreated();
 		}
 		
@@ -882,6 +907,19 @@ namespace HealthCareModel.Object_Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_PublishedAlarm", Storage="_PublishedAlarms", ThisKey="id", OtherKey="alarmId")]
+		public EntitySet<PublishedAlarm> PublishedAlarms
+		{
+			get
+			{
+				return this._PublishedAlarms;
+			}
+			set
+			{
+				this._PublishedAlarms.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -909,6 +947,18 @@ namespace HealthCareModel.Object_Models
 		}
 		
 		private void detach_AlarmAttendances(AlarmAttendance entity)
+		{
+			this.SendPropertyChanging();
+			entity.Alarm = null;
+		}
+		
+		private void attach_PublishedAlarms(PublishedAlarm entity)
+		{
+			this.SendPropertyChanging();
+			entity.Alarm = this;
+		}
+		
+		private void detach_PublishedAlarms(PublishedAlarm entity)
 		{
 			this.SendPropertyChanging();
 			entity.Alarm = null;
@@ -1445,6 +1495,360 @@ namespace HealthCareModel.Object_Models
 		{
 			this.SendPropertyChanging();
 			entity.Task = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AlarmPublishers")]
+	public partial class AlarmPublisher : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _pacient_name;
+		
+		private string _condition;
+		
+		private string _location;
+		
+		private string _password;
+		
+		private EntitySet<PublishedAlarm> _PublishedAlarms;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void Onpacient_nameChanging(string value);
+    partial void Onpacient_nameChanged();
+    partial void OnconditionChanging(string value);
+    partial void OnconditionChanged();
+    partial void OnlocationChanging(string value);
+    partial void OnlocationChanged();
+    partial void OnpasswordChanging(string value);
+    partial void OnpasswordChanged();
+    #endregion
+		
+		public AlarmPublisher()
+		{
+			this._PublishedAlarms = new EntitySet<PublishedAlarm>(new Action<PublishedAlarm>(this.attach_PublishedAlarms), new Action<PublishedAlarm>(this.detach_PublishedAlarms));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pacient_name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string pacient_name
+		{
+			get
+			{
+				return this._pacient_name;
+			}
+			set
+			{
+				if ((this._pacient_name != value))
+				{
+					this.Onpacient_nameChanging(value);
+					this.SendPropertyChanging();
+					this._pacient_name = value;
+					this.SendPropertyChanged("pacient_name");
+					this.Onpacient_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_condition", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string condition
+		{
+			get
+			{
+				return this._condition;
+			}
+			set
+			{
+				if ((this._condition != value))
+				{
+					this.OnconditionChanging(value);
+					this.SendPropertyChanging();
+					this._condition = value;
+					this.SendPropertyChanged("condition");
+					this.OnconditionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_location", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string location
+		{
+			get
+			{
+				return this._location;
+			}
+			set
+			{
+				if ((this._location != value))
+				{
+					this.OnlocationChanging(value);
+					this.SendPropertyChanging();
+					this._location = value;
+					this.SendPropertyChanged("location");
+					this.OnlocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this.OnpasswordChanging(value);
+					this.SendPropertyChanging();
+					this._password = value;
+					this.SendPropertyChanged("password");
+					this.OnpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AlarmPublisher_PublishedAlarm", Storage="_PublishedAlarms", ThisKey="id", OtherKey="publisherId")]
+		public EntitySet<PublishedAlarm> PublishedAlarms
+		{
+			get
+			{
+				return this._PublishedAlarms;
+			}
+			set
+			{
+				this._PublishedAlarms.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_PublishedAlarms(PublishedAlarm entity)
+		{
+			this.SendPropertyChanging();
+			entity.AlarmPublisher = this;
+		}
+		
+		private void detach_PublishedAlarms(PublishedAlarm entity)
+		{
+			this.SendPropertyChanging();
+			entity.AlarmPublisher = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PublishedAlarms")]
+	public partial class PublishedAlarm : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _alarmId;
+		
+		private int _publisherId;
+		
+		private EntityRef<Alarm> _Alarm;
+		
+		private EntityRef<AlarmPublisher> _AlarmPublisher;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnalarmIdChanging(int value);
+    partial void OnalarmIdChanged();
+    partial void OnpublisherIdChanging(int value);
+    partial void OnpublisherIdChanged();
+    #endregion
+		
+		public PublishedAlarm()
+		{
+			this._Alarm = default(EntityRef<Alarm>);
+			this._AlarmPublisher = default(EntityRef<AlarmPublisher>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_alarmId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int alarmId
+		{
+			get
+			{
+				return this._alarmId;
+			}
+			set
+			{
+				if ((this._alarmId != value))
+				{
+					if (this._Alarm.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnalarmIdChanging(value);
+					this.SendPropertyChanging();
+					this._alarmId = value;
+					this.SendPropertyChanged("alarmId");
+					this.OnalarmIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_publisherId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int publisherId
+		{
+			get
+			{
+				return this._publisherId;
+			}
+			set
+			{
+				if ((this._publisherId != value))
+				{
+					if (this._AlarmPublisher.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnpublisherIdChanging(value);
+					this.SendPropertyChanging();
+					this._publisherId = value;
+					this.SendPropertyChanged("publisherId");
+					this.OnpublisherIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alarm_PublishedAlarm", Storage="_Alarm", ThisKey="alarmId", OtherKey="id", IsForeignKey=true)]
+		public Alarm Alarm
+		{
+			get
+			{
+				return this._Alarm.Entity;
+			}
+			set
+			{
+				Alarm previousValue = this._Alarm.Entity;
+				if (((previousValue != value) 
+							|| (this._Alarm.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Alarm.Entity = null;
+						previousValue.PublishedAlarms.Remove(this);
+					}
+					this._Alarm.Entity = value;
+					if ((value != null))
+					{
+						value.PublishedAlarms.Add(this);
+						this._alarmId = value.id;
+					}
+					else
+					{
+						this._alarmId = default(int);
+					}
+					this.SendPropertyChanged("Alarm");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="AlarmPublisher_PublishedAlarm", Storage="_AlarmPublisher", ThisKey="publisherId", OtherKey="id", IsForeignKey=true)]
+		public AlarmPublisher AlarmPublisher
+		{
+			get
+			{
+				return this._AlarmPublisher.Entity;
+			}
+			set
+			{
+				AlarmPublisher previousValue = this._AlarmPublisher.Entity;
+				if (((previousValue != value) 
+							|| (this._AlarmPublisher.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._AlarmPublisher.Entity = null;
+						previousValue.PublishedAlarms.Remove(this);
+					}
+					this._AlarmPublisher.Entity = value;
+					if ((value != null))
+					{
+						value.PublishedAlarms.Add(this);
+						this._publisherId = value.id;
+					}
+					else
+					{
+						this._publisherId = default(int);
+					}
+					this.SendPropertyChanged("AlarmPublisher");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

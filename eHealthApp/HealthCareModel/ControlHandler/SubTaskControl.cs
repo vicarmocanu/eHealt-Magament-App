@@ -5,7 +5,7 @@ using System.Text;
 using HealthCareModel.Object_Models;
 using HealthCareModel.DBHandler;
 
-namespace HealthCareModel.Controller
+namespace HealthCareModel.ControlHandler
 {
     public static class SubTaskControl
     {

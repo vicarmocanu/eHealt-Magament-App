@@ -91,5 +91,28 @@ namespace HealthCareModel.DBHandler
                 }
             }
         }
+
+        public int getMaxId()
+        {
+            int lastId = 0;
+            using (var db = new HealthModelsDataContext())
+            {
+                lastId = db.Alarms.OrderByDescending(u => u.id).FirstOrDefault().id;
+            }
+            return lastId;
+        }
+
+        public Alarm getAlarmById(int id)
+        {
+            var alarm = new Alarm();
+
+            using (var db = new HealthModelsDataContext())
+            {
+                var query = db.Alarms.SingleOrDefault(targetAlarm => targetAlarm.id == id);
+                alarm = query;
+            }
+
+            return alarm;
+        }
     }
 }

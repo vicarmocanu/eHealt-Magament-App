@@ -48,3 +48,27 @@ E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Ma
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.dll
 E:\Vuk Work\Projects\University\Semester 7\System Intergartion\Project\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\csc.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\System.Collections.Immutable.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\System.Reflection.Metadata.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\vbc.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\VBCSCompiler.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\roslyn\VBCSCompiler.exe.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.dll.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthWebUI.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareWCFServices.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\HealthCareWCFServices.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.csprojResolveAssemblyReference.cache
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthWebUI\obj\Debug\HealthWebUI.pdb

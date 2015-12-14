@@ -45,8 +45,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlarmPublisherService.cs" />
     <Compile Include="AlarmService.cs" />
     <Compile Include="ExtendedService.cs" />
+    <Compile Include="IAlarmPublisherService.cs" />
     <Compile Include="IAlarmService.cs" />
     <Compile Include="IExtendedService.cs" />
     <Compile Include="ISubTaskService.cs" />

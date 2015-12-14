@@ -38,7 +38,11 @@ namespace HealthCareWCFServices
         [OperationContract]
         void deleteAssignedTask(string taskName, string username);
 
+        [OperationContract]
+        void createPublishedAlarm(int alarmId, int publisherId);
 
+        [OperationContract]
+        int getPublisherId(int alarmId);
 
     }
 

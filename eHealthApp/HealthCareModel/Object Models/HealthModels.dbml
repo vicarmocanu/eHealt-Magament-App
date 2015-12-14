@@ -37,6 +37,7 @@
       <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Alarm_AlarmAttendance" Member="AlarmAttendances" ThisKey="id" OtherKey="alarmId" Type="AlarmAttendance" />
       <Association Name="Alarm_AlarmCount" Member="AlarmCount" ThisKey="id" OtherKey="alarmId" Type="AlarmCount" Cardinality="One" />
+      <Association Name="Alarm_PublishedAlarm" Member="PublishedAlarms" ThisKey="id" OtherKey="alarmId" Type="PublishedAlarm" />
     </Type>
   </Table>
   <Table Name="dbo.AssignedTasks" Member="AssignedTasks">
@@ -64,6 +65,24 @@
       <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Task_AssignedTask" Member="AssignedTasks" ThisKey="id" OtherKey="taskId" Type="AssignedTask" />
       <Association Name="Task_SubTask" Member="SubTasks" ThisKey="id" OtherKey="taskId" Type="SubTask" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AlarmPublishers" Member="AlarmPublishers">
+    <Type Name="AlarmPublisher">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pacient_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="condition" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AlarmPublisher_PublishedAlarm" Member="PublishedAlarms" ThisKey="id" OtherKey="publisherId" Type="PublishedAlarm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PublishedAlarms" Member="PublishedAlarms">
+    <Type Name="PublishedAlarm">
+      <Column Name="alarmId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="publisherId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Alarm_PublishedAlarm" Member="Alarm" ThisKey="alarmId" OtherKey="id" Type="Alarm" IsForeignKey="true" />
+      <Association Name="AlarmPublisher_PublishedAlarm" Member="AlarmPublisher" ThisKey="publisherId" OtherKey="id" Type="AlarmPublisher" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

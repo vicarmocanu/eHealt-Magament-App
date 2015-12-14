@@ -22,6 +22,8 @@ namespace HealthCareWCFServices
         private static readonly System.Object obj9 = new System.Object();
         private static readonly System.Object obj10 = new System.Object();
         private static readonly System.Object obj11 = new System.Object();
+        private static readonly System.Object obj12 = new System.Object();
+        private static readonly System.Object obj13 = new System.Object();
 
 
         public void createAlarmAttendance(string alarmName, string userName)
@@ -237,6 +239,45 @@ namespace HealthCareWCFServices
                     System.Threading.Monitor.Exit(obj11);
                 }
             }
+        }
+
+        public void createPublishedAlarm(int alarmId, int publisherId)
+        {
+            if (System.Threading.Monitor.TryEnter(obj12, 45000))
+            {
+                try
+                {
+                    ExtendedControl.createPublishedAlarm(alarmId, publisherId);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj12);
+                }
+            }
+        }
+
+        public int getPublisherId(int alarmId)
+        {
+            int returnId = 0;
+
+            if (System.Threading.Monitor.TryEnter(obj13, 45000))
+            {
+                try
+                {
+                    returnId = ExtendedControl.getPublisherId(alarmId);
+
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj13);
+                }
+            }
+
+            return returnId;
         }
     }
 }

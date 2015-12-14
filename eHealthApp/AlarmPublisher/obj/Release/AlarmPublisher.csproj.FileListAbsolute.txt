@@ -1,6 +1,0 @@
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Release\AlarmPublisher.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Release\AlarmPublisher.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Release\AlarmModel.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Release\AlarmModel.pdb
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Release\AlarmPublisher.dll
-C:\Users\Victor Carmocanu\Documents\GitHubVisualStudio\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Release\AlarmPublisher.pdb

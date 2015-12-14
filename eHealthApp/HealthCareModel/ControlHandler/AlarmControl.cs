@@ -6,7 +6,7 @@ using HealthCareModel.DBHandler;
 using HealthCareModel.Object_Models;
 
 
-namespace HealthCareModel.Controller
+namespace HealthCareModel.ControlHandler
 {
     public static class AlarmControl
     {
@@ -35,6 +35,16 @@ namespace HealthCareModel.Controller
         public static void deleteAlarm(string name)
         {
             alarmHandler.deleteAlarm(name);
-        }        
+        }
+
+        public static int getMaxId()
+        {
+            return alarmHandler.getMaxId();
+        }
+
+        public static Alarm getAlarmById(int id)
+        {
+            return alarmHandler.getAlarmById(id);
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace HealthCareModel.ControlHandler
         private static IAlarmAttendanceHandler alarmAttendanceHandler = new AlarmAttendanceHandler();
         private static IAlarmCountHandler alarmCountHandler = new AlarmCountHandler();
         private static IAssignedTaskHandler assignedTaskHandler = new AssignedTaskHandler();
+        private static IPublishedAlarms publishedAlarmsHandler = new PublishedAlarmsHandler();
 
         #region IAlarmAttendanceHandler implementation
         public static void createAlarmAttendance(string alarmName, string userName)
@@ -72,6 +73,20 @@ namespace HealthCareModel.ControlHandler
         {
             assignedTaskHandler.deleteAssignedTask(taskName, username);
         }
+        #endregion
+
+        #region IPublisherAlarms implementation
+
+        public static void createPublishedAlarm(int alarmId, int publisherId)
+        {
+            publishedAlarmsHandler.createPublishedAlarm(alarmId, publisherId);
+        }
+
+        public static int getPublisherId(int alarmId)
+        {
+            return publishedAlarmsHandler.getPublisherId(alarmId);
+        }
+
         #endregion
     }
 }
