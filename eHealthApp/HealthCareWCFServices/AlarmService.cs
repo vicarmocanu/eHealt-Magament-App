@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
 using HealthCareModel.ControlHandler;
 
 namespace HealthCareWCFServices
@@ -17,7 +21,7 @@ namespace HealthCareWCFServices
 
         public void createAlarm(string name, string type, string location, string status)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -31,7 +35,7 @@ namespace HealthCareWCFServices
         }
         public void updateAlarm(string name, string type, string location, string status)
         {
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -46,13 +50,13 @@ namespace HealthCareWCFServices
         public Alarm getAlarm(string name)
         {
             Alarm serviceAlarm = new Alarm();
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
                     serviceAlarm.Name = AlarmControl.getAlarm(name).name;
                     serviceAlarm.Type = AlarmControl.getAlarm(name).type;
-                    serviceAlarm.Time = AlarmControl.getAlarm(name).time;
+                    serviceAlarm.Time = Convert.ToString(AlarmControl.getAlarm(name).time);
                     serviceAlarm.Location = AlarmControl.getAlarm(name).location;
                     serviceAlarm.Status = AlarmControl.getAlarm(name).status;
                     
@@ -73,7 +77,7 @@ namespace HealthCareWCFServices
         {
             List<Alarm> alarms = new List<Alarm>();
 
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
@@ -87,7 +91,7 @@ namespace HealthCareWCFServices
                             Alarm serviceAlarm = new Alarm();
 
                             serviceAlarm.Name = alarmHost.name;
-                            serviceAlarm.Time = alarmHost.time;
+                            serviceAlarm.Time = Convert.ToString(alarmHost.time);
                             serviceAlarm.Type = alarmHost.type;
                             serviceAlarm.Location = alarmHost.location;
                             serviceAlarm.Status = alarmHost.status;
@@ -110,7 +114,7 @@ namespace HealthCareWCFServices
         }
         public void deleteAlarm(string name)
         {
-            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            if (System.Threading.Monitor.TryEnter(obj5, 10000))
             {
                 try
                 {
@@ -127,7 +131,7 @@ namespace HealthCareWCFServices
         {
             int maxId = 0;
 
-            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            if (System.Threading.Monitor.TryEnter(obj6, 10000))
             {
                 try
                 {
@@ -149,13 +153,13 @@ namespace HealthCareWCFServices
         public Alarm getAlarmById(int id)
         {
             Alarm serviceAlarm = new Alarm();
-            if (System.Threading.Monitor.TryEnter(obj7, 45000))
+            if (System.Threading.Monitor.TryEnter(obj7, 10000))
             {
                 try
                 {
                     serviceAlarm.Name = AlarmControl.getAlarmById(id).name;
                     serviceAlarm.Type = AlarmControl.getAlarmById(id).type;
-                    serviceAlarm.Time = AlarmControl.getAlarmById(id).time;
+                    serviceAlarm.Time = Convert.ToString(AlarmControl.getAlarmById(id).time);
                     serviceAlarm.Location = AlarmControl.getAlarmById(id).location;
                     serviceAlarm.Status = AlarmControl.getAlarmById(id).status;
 
@@ -167,7 +171,7 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj3);
+                    System.Threading.Monitor.Exit(obj7);
                 }
             }
             return serviceAlarm;

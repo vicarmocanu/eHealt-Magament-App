@@ -185,10 +185,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HealthCareModel\HealthCareModel.csproj">
-      <Project>{a0c45089-b9b9-4974-8d88-6c55b8218d39}</Project>
-      <Name>HealthCareModel</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HealthCareWCFServices\HealthCareWCFServices.csproj">
       <Project>{63165ffe-d687-4dd5-ba12-b401d6a5c562}</Project>
       <Name>HealthCareWCFServices</Name>

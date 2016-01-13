@@ -37,6 +37,12 @@
   <wsdl:message name="IExtendedService_getAlarmCount_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAlarmCountResponse" />
   </wsdl:message>
+  <wsdl:message name="IExtendedService_incrementAlarmCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:incrementAlarmCount" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_incrementAlarmCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:incrementAlarmCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IExtendedService_getTaskUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:getTaskUsers" />
   </wsdl:message>
@@ -93,6 +99,10 @@
     <wsdl:operation name="getAlarmCount">
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCount" message="tns:IExtendedService_getAlarmCount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCountResponse" message="tns:IExtendedService_getAlarmCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="incrementAlarmCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/incrementAlarmCount" message="tns:IExtendedService_incrementAlarmCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/incrementAlarmCountResponse" message="tns:IExtendedService_incrementAlarmCount_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getTaskUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getTaskUsers" message="tns:IExtendedService_getTaskUsers_InputMessage" />
@@ -159,6 +169,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAlarmCount">
       <soap:operation soapAction="http://tempuri.org/IExtendedService/getAlarmCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incrementAlarmCount">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/incrementAlarmCount" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

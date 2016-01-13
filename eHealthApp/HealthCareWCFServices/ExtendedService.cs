@@ -1,10 +1,10 @@
-﻿using HealthCareModel.ControlHandler;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using HealthCareModel.ControlHandler;
 
 namespace HealthCareWCFServices
 {
@@ -23,12 +23,11 @@ namespace HealthCareWCFServices
         private static readonly System.Object obj10 = new System.Object();
         private static readonly System.Object obj11 = new System.Object();
         private static readonly System.Object obj12 = new System.Object();
-        private static readonly System.Object obj13 = new System.Object();
 
 
         public void createAlarmAttendance(string alarmName, string userName)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -43,7 +42,7 @@ namespace HealthCareWCFServices
 
         public void deleteAlarmAttendance(string alarmName, string userName)
         {
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -61,7 +60,7 @@ namespace HealthCareWCFServices
 
             List<User> alarmAttendants = new List<User>();
 
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
@@ -97,7 +96,7 @@ namespace HealthCareWCFServices
 
         public void createAlarmCount(string alarmName)
         {
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
@@ -112,15 +111,17 @@ namespace HealthCareWCFServices
 
        // public void deleteAlarmCount(int alarmId){    } - no practical implementation yet?
 
-        public ServiceAlarmCount getAlarmCount(int alarmId)
+        public int getAlarmCount(int alarmId)
         {
-            ServiceAlarmCount serviceCount = new ServiceAlarmCount();
-            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            int counts = 0;
+            //ServiceAlarmCount serviceCount = new ServiceAlarmCount();
+            if (System.Threading.Monitor.TryEnter(obj5, 10000))
             {
                 try
                 {
-                    serviceCount.AlarmId = ExtendedControl.getAlarmCount(alarmId).alarmId;
-                    serviceCount.Count = ExtendedControl.getAlarmCount(alarmId).count;
+                    //serviceCount.AlarmId = ExtendedControl.getAlarmCount(alarmId).alarmId;
+                    //serviceCount.Count = ExtendedControl.getAlarmCount(alarmId).count;
+                    counts = ExtendedControl.getAlarmCount(alarmId).count;
 
                 }
                 catch (NullReferenceException)
@@ -129,10 +130,10 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj6);
+                    System.Threading.Monitor.Exit(obj5);
                 }
             }
-            return serviceCount;
+            return counts;
         }
 
       //  public void incrementAlarmCount(int alarmId) { } - no practical implementation yet
@@ -141,7 +142,7 @@ namespace HealthCareWCFServices
         {
             List<User> srvTaskUsers = new List<User>();
 
-            if (System.Threading.Monitor.TryEnter(obj8, 45000))
+            if (System.Threading.Monitor.TryEnter(obj6, 10000))
             {
                 try
                 {
@@ -167,7 +168,7 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj8);
+                    System.Threading.Monitor.Exit(obj6);
                 }
             }
 
@@ -178,7 +179,7 @@ namespace HealthCareWCFServices
         {
             List<Task> tasks = new List<Task>();
 
-            if (System.Threading.Monitor.TryEnter(obj9, 45000))
+            if (System.Threading.Monitor.TryEnter(obj7, 10000))
             {
                 try
                 {
@@ -204,7 +205,7 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj9);
+                    System.Threading.Monitor.Exit(obj7);
                 }
             }
 
@@ -213,11 +214,41 @@ namespace HealthCareWCFServices
 
         public void createAssignedTask(string taskName, string username)
         {
-            if (System.Threading.Monitor.TryEnter(obj10, 45000))
+            if (System.Threading.Monitor.TryEnter(obj8, 10000))
             {
                 try
                 {
                     ExtendedControl.createAssignedTask(taskName, username);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj8);
+                }
+            }
+        }
+
+        public void deleteAssignedTask(string taskName, string username)
+        {
+            if (System.Threading.Monitor.TryEnter(obj9, 10000))
+            {
+                try
+                {
+                    ExtendedControl.deleteAssignedTask(taskName, username);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj9);
+                }
+            }
+        }
+
+        public void createPublishedAlarm(int alarmId, int publisherId)
+        {
+            if (System.Threading.Monitor.TryEnter(obj10, 10000))
+            {
+                try
+                {
+                    ExtendedControl.createPublishedAlarm(alarmId, publisherId);
                 }
                 finally
                 {
@@ -226,41 +257,11 @@ namespace HealthCareWCFServices
             }
         }
 
-        public void deleteAssignedTask(string taskName, string username)
-        {
-            if (System.Threading.Monitor.TryEnter(obj11, 45000))
-            {
-                try
-                {
-                    ExtendedControl.deleteAssignedTask(taskName, username);
-                }
-                finally
-                {
-                    System.Threading.Monitor.Exit(obj11);
-                }
-            }
-        }
-
-        public void createPublishedAlarm(int alarmId, int publisherId)
-        {
-            if (System.Threading.Monitor.TryEnter(obj12, 45000))
-            {
-                try
-                {
-                    ExtendedControl.createPublishedAlarm(alarmId, publisherId);
-                }
-                finally
-                {
-                    System.Threading.Monitor.Exit(obj12);
-                }
-            }
-        }
-
         public int getPublisherId(int alarmId)
         {
             int returnId = 0;
 
-            if (System.Threading.Monitor.TryEnter(obj13, 45000))
+            if (System.Threading.Monitor.TryEnter(obj11, 10000))
             {
                 try
                 {
@@ -273,11 +274,26 @@ namespace HealthCareWCFServices
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj13);
+                    System.Threading.Monitor.Exit(obj11);
                 }
             }
 
             return returnId;
+        }
+
+        public void incrementAlarmCount(int alarmId)
+        {
+            if (System.Threading.Monitor.TryEnter(obj12, 10000))
+            {
+                try
+                {
+                    ExtendedControl.incrementAlarmCount(alarmId);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj12);
+                }
+            }
         }
     }
 }

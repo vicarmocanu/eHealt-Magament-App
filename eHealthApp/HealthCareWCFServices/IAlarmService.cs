@@ -39,7 +39,7 @@ namespace HealthCareWCFServices
         private int id;
         private string name;
         private string type;
-        private DateTime time;
+        private string time;
         private string location;
         private string status;
 
@@ -103,7 +103,7 @@ namespace HealthCareWCFServices
         }
 
         [DataMemberAttribute]
-        public DateTime Time
+        public string Time
         {
             get
             {

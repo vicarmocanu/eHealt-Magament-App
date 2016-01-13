@@ -44,6 +44,18 @@ namespace HealthWebUI.AlarmServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/deleteAlarm", ReplyAction="http://tempuri.org/IAlarmService/deleteAlarmResponse")]
         System.Threading.Tasks.Task deleteAlarmAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/getMaxId", ReplyAction="http://tempuri.org/IAlarmService/getMaxIdResponse")]
+        int getMaxId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/getMaxId", ReplyAction="http://tempuri.org/IAlarmService/getMaxIdResponse")]
+        System.Threading.Tasks.Task<int> getMaxIdAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/getAlarmById", ReplyAction="http://tempuri.org/IAlarmService/getAlarmByIdResponse")]
+        HealthCareWCFServices.Alarm getAlarmById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/getAlarmById", ReplyAction="http://tempuri.org/IAlarmService/getAlarmByIdResponse")]
+        System.Threading.Tasks.Task<HealthCareWCFServices.Alarm> getAlarmByIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +123,22 @@ namespace HealthWebUI.AlarmServiceReference {
         
         public System.Threading.Tasks.Task deleteAlarmAsync(string name) {
             return base.Channel.deleteAlarmAsync(name);
+        }
+        
+        public int getMaxId() {
+            return base.Channel.getMaxId();
+        }
+        
+        public System.Threading.Tasks.Task<int> getMaxIdAsync() {
+            return base.Channel.getMaxIdAsync();
+        }
+        
+        public HealthCareWCFServices.Alarm getAlarmById(int id) {
+            return base.Channel.getAlarmById(id);
+        }
+        
+        public System.Threading.Tasks.Task<HealthCareWCFServices.Alarm> getAlarmByIdAsync(int id) {
+            return base.Channel.getAlarmByIdAsync(id);
         }
     }
 }

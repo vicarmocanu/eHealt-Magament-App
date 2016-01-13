@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareModel", "HealthCareModel\HealthCareModel.csproj", "{A0C45089-B9B9-4974-8D88-6C55B8218D39}"
 EndProject
@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmPublisher", "AlarmPubl
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarmReceiver", "AlarmReceiver\AlarmReceiver.csproj", "{51E73A4F-3664-4003-B75F-A23705E74DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{C4B0D0FC-36D5-4920-949F-D4FBBE0EFD22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51E73A4F-3664-4003-B75F-A23705E74DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B0D0FC-36D5-4920-949F-D4FBBE0EFD22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B0D0FC-36D5-4920-949F-D4FBBE0EFD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B0D0FC-36D5-4920-949F-D4FBBE0EFD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B0D0FC-36D5-4920-949F-D4FBBE0EFD22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

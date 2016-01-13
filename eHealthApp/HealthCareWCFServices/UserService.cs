@@ -20,7 +20,7 @@ namespace HealthCareWCFServices
 
         public void createUser(string firstName, string lastName, string username, string password, string role)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -35,7 +35,7 @@ namespace HealthCareWCFServices
 
         public void updateUser(string firstName, string lastName, string username, string password, string role)
         {
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace HealthCareWCFServices
         public User getUser(string userName)
         {
             User serviceUser = new User();
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
@@ -78,7 +78,7 @@ namespace HealthCareWCFServices
         {
             List<User> users = new List<User>();
 
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
@@ -117,7 +117,7 @@ namespace HealthCareWCFServices
         {
             User serviceUser = new User();
 
-            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            if (System.Threading.Monitor.TryEnter(obj5, 10000))
             {
                 try
                 {

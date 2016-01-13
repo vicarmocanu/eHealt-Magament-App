@@ -20,7 +20,7 @@ namespace HealthCareModel.DBHandler
                     var alarmCount = new AlarmCount();
 
                     alarmCount.alarmId = alarm.id;
-                    alarmCount.count = 0;
+                    alarmCount.count = 1;
 
                     db.AlarmCounts.InsertOnSubmit(alarmCount);
                     db.SubmitChanges();

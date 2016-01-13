@@ -21,8 +21,8 @@ namespace HealthCareModel.DBHandler
                 {
                     var alarmAttendace = new AlarmAttendance();
 
-                    alarmAttendace.userId = alarm.id;
-                    alarmAttendace.alarmId = user.id;
+                    alarmAttendace.userId = user.id;
+                    alarmAttendace.alarmId = alarm.id;
 
                     db.AlarmAttendances.InsertOnSubmit(alarmAttendace);
                     db.SubmitChanges();

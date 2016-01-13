@@ -21,7 +21,7 @@ namespace HealthCareWCFServices
 
         public void createSubtask(string taskName, string description, string status)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -36,7 +36,7 @@ namespace HealthCareWCFServices
 
         public void updateSubtask(int id, string description, string status)
         {
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -52,7 +52,7 @@ namespace HealthCareWCFServices
         public SubTask getSubTask(int id)
         {
             SubTask serviceSubTask = new SubTask();
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
@@ -77,7 +77,7 @@ namespace HealthCareWCFServices
         {
             List<SubTask> subTsk = new List<SubTask>();
 
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
@@ -113,7 +113,7 @@ namespace HealthCareWCFServices
 
         public void deleteSubTask(int id)
         {
-            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            if (System.Threading.Monitor.TryEnter(obj5, 10000))
             {
                 try
                 {
@@ -130,7 +130,7 @@ namespace HealthCareWCFServices
         {
             List<SubTask> subTsk = new List<SubTask>();
 
-            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            if (System.Threading.Monitor.TryEnter(obj6, 10000))
             {
                 try
                 {

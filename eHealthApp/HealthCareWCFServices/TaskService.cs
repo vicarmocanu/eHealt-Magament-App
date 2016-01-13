@@ -20,7 +20,7 @@ namespace HealthCareWCFServices
 
         public void createTask(string taskName, string status, string description)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -35,7 +35,7 @@ namespace HealthCareWCFServices
 
         public void updateTask(string taskName, string status, string description)
         {
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace HealthCareWCFServices
         public Task getTask(string taskName)
         {
             Task serviceTask = new Task();
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
@@ -75,7 +75,7 @@ namespace HealthCareWCFServices
         {
             List<Task> tsk = new List<Task>();
 
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
@@ -110,7 +110,7 @@ namespace HealthCareWCFServices
 
         public void deleteTask(string taskName)
         {
-            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            if (System.Threading.Monitor.TryEnter(obj5, 10000))
             {
                 try
                 {
@@ -127,7 +127,7 @@ namespace HealthCareWCFServices
         {
             List<Task> tsk = new List<Task>();
 
-            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            if (System.Threading.Monitor.TryEnter(obj6, 10000))
             {
                 try
                 {

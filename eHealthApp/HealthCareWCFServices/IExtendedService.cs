@@ -24,7 +24,10 @@ namespace HealthCareWCFServices
         void createAlarmCount(string alarmName);
 
         [OperationContract]
-        ServiceAlarmCount getAlarmCount(int alarmId);
+        int getAlarmCount(int alarmId);
+
+        [OperationContract]
+        void incrementAlarmCount(int alarmId);
 
         [OperationContract]
         List<User> getTaskUsers(string taskName);
@@ -46,6 +49,7 @@ namespace HealthCareWCFServices
 
     }
 
+    /*
     [DataContract]
     public class ServiceAlarmCount
     {
@@ -80,4 +84,5 @@ namespace HealthCareWCFServices
             }
         }
     }
+    */
 }

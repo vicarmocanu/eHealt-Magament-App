@@ -37,6 +37,12 @@
   <wsdl:message name="IExtendedService_getAlarmCount_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAlarmCountResponse" />
   </wsdl:message>
+  <wsdl:message name="IExtendedService_incrementAlarmCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:incrementAlarmCount" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_incrementAlarmCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:incrementAlarmCountResponse" />
+  </wsdl:message>
   <wsdl:message name="IExtendedService_getTaskUsers_InputMessage">
     <wsdl:part name="parameters" element="tns:getTaskUsers" />
   </wsdl:message>
@@ -61,6 +67,18 @@
   <wsdl:message name="IExtendedService_deleteAssignedTask_OutputMessage">
     <wsdl:part name="parameters" element="tns:deleteAssignedTaskResponse" />
   </wsdl:message>
+  <wsdl:message name="IExtendedService_createPublishedAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:createPublishedAlarm" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_createPublishedAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createPublishedAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getPublisherId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPublisherId" />
+  </wsdl:message>
+  <wsdl:message name="IExtendedService_getPublisherId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPublisherIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IExtendedService">
     <wsdl:operation name="createAlarmAttendance">
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/createAlarmAttendance" message="tns:IExtendedService_createAlarmAttendance_InputMessage" />
@@ -82,6 +100,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCount" message="tns:IExtendedService_getAlarmCount_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getAlarmCountResponse" message="tns:IExtendedService_getAlarmCount_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="incrementAlarmCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/incrementAlarmCount" message="tns:IExtendedService_incrementAlarmCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/incrementAlarmCountResponse" message="tns:IExtendedService_incrementAlarmCount_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getTaskUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getTaskUsers" message="tns:IExtendedService_getTaskUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getTaskUsersResponse" message="tns:IExtendedService_getTaskUsers_OutputMessage" />
@@ -97,6 +119,14 @@
     <wsdl:operation name="deleteAssignedTask">
       <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/deleteAssignedTask" message="tns:IExtendedService_deleteAssignedTask_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/deleteAssignedTaskResponse" message="tns:IExtendedService_deleteAssignedTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createPublishedAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/createPublishedAlarm" message="tns:IExtendedService_createPublishedAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/createPublishedAlarmResponse" message="tns:IExtendedService_createPublishedAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPublisherId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExtendedService/getPublisherId" message="tns:IExtendedService_getPublisherId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExtendedService/getPublisherIdResponse" message="tns:IExtendedService_getPublisherId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IExtendedService" type="tns:IExtendedService">
@@ -146,6 +176,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="incrementAlarmCount">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/incrementAlarmCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getTaskUsers">
       <soap:operation soapAction="http://tempuri.org/IExtendedService/getTaskUsers" style="document" />
       <wsdl:input>
@@ -175,6 +214,24 @@
     </wsdl:operation>
     <wsdl:operation name="deleteAssignedTask">
       <soap:operation soapAction="http://tempuri.org/IExtendedService/deleteAssignedTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createPublishedAlarm">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/createPublishedAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublisherId">
+      <soap:operation soapAction="http://tempuri.org/IExtendedService/getPublisherId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

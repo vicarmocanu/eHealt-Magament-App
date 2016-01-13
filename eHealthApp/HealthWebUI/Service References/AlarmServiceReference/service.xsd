@@ -69,4 +69,30 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="getMaxId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMaxIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getMaxIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAlarmById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAlarmByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HealthCareWCFServices" minOccurs="0" name="getAlarmByIdResult" nillable="true" type="q3:Alarm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

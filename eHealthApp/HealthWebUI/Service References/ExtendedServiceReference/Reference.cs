@@ -40,10 +40,16 @@ namespace HealthWebUI.ExtendedServiceReference {
         System.Threading.Tasks.Task createAlarmCountAsync(string alarmName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getAlarmCount", ReplyAction="http://tempuri.org/IExtendedService/getAlarmCountResponse")]
-        HealthCareWCFServices.ServiceAlarmCount getAlarmCount(int alarmId);
+        int getAlarmCount(int alarmId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getAlarmCount", ReplyAction="http://tempuri.org/IExtendedService/getAlarmCountResponse")]
-        System.Threading.Tasks.Task<HealthCareWCFServices.ServiceAlarmCount> getAlarmCountAsync(int alarmId);
+        System.Threading.Tasks.Task<int> getAlarmCountAsync(int alarmId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/incrementAlarmCount", ReplyAction="http://tempuri.org/IExtendedService/incrementAlarmCountResponse")]
+        void incrementAlarmCount(int alarmId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/incrementAlarmCount", ReplyAction="http://tempuri.org/IExtendedService/incrementAlarmCountResponse")]
+        System.Threading.Tasks.Task incrementAlarmCountAsync(int alarmId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getTaskUsers", ReplyAction="http://tempuri.org/IExtendedService/getTaskUsersResponse")]
         HealthCareWCFServices.User[] getTaskUsers(string taskName);
@@ -68,6 +74,18 @@ namespace HealthWebUI.ExtendedServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/deleteAssignedTask", ReplyAction="http://tempuri.org/IExtendedService/deleteAssignedTaskResponse")]
         System.Threading.Tasks.Task deleteAssignedTaskAsync(string taskName, string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/createPublishedAlarm", ReplyAction="http://tempuri.org/IExtendedService/createPublishedAlarmResponse")]
+        void createPublishedAlarm(int alarmId, int publisherId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/createPublishedAlarm", ReplyAction="http://tempuri.org/IExtendedService/createPublishedAlarmResponse")]
+        System.Threading.Tasks.Task createPublishedAlarmAsync(int alarmId, int publisherId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getPublisherId", ReplyAction="http://tempuri.org/IExtendedService/getPublisherIdResponse")]
+        int getPublisherId(int alarmId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExtendedService/getPublisherId", ReplyAction="http://tempuri.org/IExtendedService/getPublisherIdResponse")]
+        System.Threading.Tasks.Task<int> getPublisherIdAsync(int alarmId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -129,12 +147,20 @@ namespace HealthWebUI.ExtendedServiceReference {
             return base.Channel.createAlarmCountAsync(alarmName);
         }
         
-        public HealthCareWCFServices.ServiceAlarmCount getAlarmCount(int alarmId) {
+        public int getAlarmCount(int alarmId) {
             return base.Channel.getAlarmCount(alarmId);
         }
         
-        public System.Threading.Tasks.Task<HealthCareWCFServices.ServiceAlarmCount> getAlarmCountAsync(int alarmId) {
+        public System.Threading.Tasks.Task<int> getAlarmCountAsync(int alarmId) {
             return base.Channel.getAlarmCountAsync(alarmId);
+        }
+        
+        public void incrementAlarmCount(int alarmId) {
+            base.Channel.incrementAlarmCount(alarmId);
+        }
+        
+        public System.Threading.Tasks.Task incrementAlarmCountAsync(int alarmId) {
+            return base.Channel.incrementAlarmCountAsync(alarmId);
         }
         
         public HealthCareWCFServices.User[] getTaskUsers(string taskName) {
@@ -167,6 +193,22 @@ namespace HealthWebUI.ExtendedServiceReference {
         
         public System.Threading.Tasks.Task deleteAssignedTaskAsync(string taskName, string username) {
             return base.Channel.deleteAssignedTaskAsync(taskName, username);
+        }
+        
+        public void createPublishedAlarm(int alarmId, int publisherId) {
+            base.Channel.createPublishedAlarm(alarmId, publisherId);
+        }
+        
+        public System.Threading.Tasks.Task createPublishedAlarmAsync(int alarmId, int publisherId) {
+            return base.Channel.createPublishedAlarmAsync(alarmId, publisherId);
+        }
+        
+        public int getPublisherId(int alarmId) {
+            return base.Channel.getPublisherId(alarmId);
+        }
+        
+        public System.Threading.Tasks.Task<int> getPublisherIdAsync(int alarmId) {
+            return base.Channel.getPublisherIdAsync(alarmId);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace HealthCareWCFServices
 
         public void createAlarmPublisher(string pacientName, string condition, string location, string password)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 10000))
             {
                 try
                 {
@@ -38,7 +38,7 @@ namespace HealthCareWCFServices
         public AlarmPublisher getAlarmPublisher(int id)
         {
             AlarmPublisher servicePublisher = new HealthCareWCFServices.AlarmPublisher();
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 10000))
             {
                 try
                 {
@@ -64,7 +64,7 @@ namespace HealthCareWCFServices
         {
             List<AlarmPublisher> publishers = new List<AlarmPublisher>();
 
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 10000))
             {
                 try
                 {
@@ -101,7 +101,7 @@ namespace HealthCareWCFServices
 
         public void updateAlarmPublisher(int id, string pacientName, string condition, string location, string password)
         {
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 10000))
             {
                 try
                 {
