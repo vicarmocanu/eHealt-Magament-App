@@ -1,0 +1,10 @@
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\TestConsole.exe.config
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\TestConsole.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\TestConsole.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\HealthCareModel.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\HealthCareWCFServices.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\bin\Debug\HealthCareWCFServices.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\obj\Debug\TestConsole.exe
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\TestConsole\obj\Debug\TestConsole.pdb

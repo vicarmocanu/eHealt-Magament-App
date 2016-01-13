@@ -1,4 +1,3 @@
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\csc.exe
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -14,14 +13,15 @@ D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\S
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.dll.config
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\AlarmPublisher.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareWCFServices.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.Client.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.ServiceModel.dll
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.Client.xml
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareWCFServices.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareModel.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareWCFServices.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\RabbitMQ.Client.xml
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\bin\HealthCareModel.pdb
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.csprojResolveAssemblyReference.cache
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.dll
+D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\AlarmPublisher\obj\Debug\AlarmPublisher.pdb

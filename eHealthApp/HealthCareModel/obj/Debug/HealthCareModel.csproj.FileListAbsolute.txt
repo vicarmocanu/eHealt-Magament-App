@@ -13,4 +13,3 @@ D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\S
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\bin\Debug\HealthCareModel.pdb
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.dll
 D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.pdb
-D:\UCN\Seventh Semester Projects\System Integration\eHealthCare System\Project\Source\eHealt-Magament-App\eHealthApp\HealthCareModel\obj\Debug\HealthCareModel.csprojResolveAssemblyReference.cache
